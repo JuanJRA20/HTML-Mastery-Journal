@@ -1,0 +1,154 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta LABEL</title>
+    <meta name="description" content="Descripción de la etiqueta LABEL" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta LABEL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta LABEL</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta LABEL?</h2>
+    <p>
+      La etiqueta <strong>&lt;label&gt;</strong> define una etiqueta de texto
+      para un control de formulario, mejorando la accesibilidad y usabilidad al
+      asociar texto descriptivo con campos de entrada.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;label&gt;</strong> es un elemento en línea
+      fundamental para la accesibilidad de formularios. Asocia texto descriptivo
+      con controles como <strong>&lt;input&gt;</strong>,
+      <strong>&lt;textarea&gt;</strong>, <strong>&lt;select&gt;</strong>, etc.,
+      mejorando enormemente la experiencia del usuario.
+    </p>
+    <p>Beneficios de usar <strong>&lt;label&gt;</strong>:</p>
+    <ul>
+      <li>Mejora la accesibilidad para lectores de pantalla</li>
+      <li>
+        Aumenta el área clickeable (hacer clic en el label activa el control)
+      </li>
+      <li>Proporciona contexto claro sobre qué datos se esperan</li>
+      <li>Es esencial para cumplir estándares de accesibilidad web (WCAG)</li>
+      <li>
+        Facilita el uso en dispositivos móviles (área de toque más grande)
+      </li>
+    </ul>
+    <p>
+      <strong>Regla de oro:</strong> Cada campo de entrada debería tener un
+      <strong>&lt;label&gt;</strong> asociado. No usar placeholders como
+      sustituto de labels, ya que desaparecen al escribir.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>A continuación se explican en detalle los atributos más importantes:</p>
+
+    <h3>for</h3>
+    <p>
+      Asocia el label con un control específico mediante el
+      <strong>id</strong> del control. Es la forma más común y robusta de
+      vincular label y campo. El valor debe coincidir exactamente con el id del
+      elemento de formulario.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;label for="nombre"&gt;Nombre:&lt;/label&gt; &lt;input type="text"
+        id="nombre"&gt;</code
+      >
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;!-- Método recomendado: usando for + id --&gt;
+&lt;label for="email"&gt;Correo electrónico:&lt;/label&gt;
+&lt;input type="email" id="email" name="email"&gt;
+
+&lt;!-- Método alternativo: anidando el control --&gt;
+&lt;label&gt;
+  Nombre:
+  &lt;input type="text" name="nombre"&gt;
+&lt;/label&gt;
+
+&lt;!-- Labels con checkboxes --&gt;
+&lt;input type="checkbox" id="terminos" name="terminos"&gt;
+&lt;label for="terminos"&gt;Acepto los términos y condiciones&lt;/label&gt;
+
+&lt;!-- Labels con radio buttons --&gt;
+&lt;input type="radio" id="hombre" name="genero" value="hombre"&gt;
+&lt;label for="hombre"&gt;Hombre&lt;/label&gt;
+
+&lt;input type="radio" id="mujer" name="genero" value="mujer"&gt;
+&lt;label for="mujer"&gt;Mujer&lt;/label&gt;
+
+&lt;!-- Label con textarea --&gt;
+&lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+&lt;textarea id="mensaje" name="mensaje" rows="5"&gt;&lt;/textarea&gt;
+
+&lt;!-- Label con select --&gt;
+&lt;label for="pais"&gt;País:&lt;/label&gt;
+&lt;select id="pais" name="pais"&gt;
+  &lt;option value="es"&gt;España&lt;/option&gt;
+  &lt;option value="mx"&gt;México&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- Formulario completo con labels --&gt;
+&lt;form&gt;
+  &lt;div&gt;
+    &lt;label for="usuario"&gt;Usuario:&lt;/label&gt;
+    &lt;input type="text" id="usuario" name="usuario" required&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;label for="password"&gt;Contraseña:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password" required&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;input type="checkbox" id="recordar" name="recordar"&gt;
+    &lt;label for="recordar"&gt;Recordarme&lt;/label&gt;
+  &lt;/div&gt;
+  
+  &lt;button type="submit"&gt;Iniciar Sesión&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Requiere etiqueta de cierre &lt;/label&gt;</li>
+      <li>El atributo for debe coincidir exactamente con el id del control</li>
+      <li>Hacer clic en el label activa/enfoca el control asociado</li>
+      <li>
+        Para checkboxes y radios, hacer clic en el label marca/desmarca la
+        casilla
+      </li>
+      <li>
+        Hay dos formas de asociar: con for/id (preferida) o anidando el control
+        dentro del label
+      </li>
+      <li>
+        No usar placeholder como sustituto de label (problemas de accesibilidad)
+      </li>
+      <li>Es obligatorio para accesibilidad web según estándares WCAG</li>
+      <li>Mejora enormemente la usabilidad en dispositivos táctiles</li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

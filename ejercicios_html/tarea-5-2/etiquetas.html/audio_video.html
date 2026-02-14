@@ -1,0 +1,224 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Las Etiquetas AUDIO y VIDEO</title>
+    <meta
+      name="description"
+      content="Descripción de las etiquetas AUDIO y VIDEO"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="Las Etiquetas AUDIO y VIDEO" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>Las Etiquetas AUDIO y VIDEO</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué son las etiquetas AUDIO y VIDEO?</h2>
+    <p>
+      Las etiquetas <strong>&lt;audio&gt;</strong> y
+      <strong>&lt;video&gt;</strong> permiten incrustar contenido multimedia
+      (audio y video respectivamente) directamente en una página web sin
+      necesidad de plugins externos.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      Las etiquetas <strong>&lt;audio&gt;</strong> y
+      <strong>&lt;video&gt;</strong> son elementos de bloque introducidos en
+      HTML5 que revolucionaron la forma de incluir multimedia en la web,
+      eliminando la dependencia de tecnologías como Flash.
+    </p>
+    <p>Usos comunes de <strong>&lt;audio&gt;</strong>:</p>
+    <ul>
+      <li>Podcasts y música</li>
+      <li>Efectos de sonido</li>
+      <li>Narraciones o audiolibros</li>
+      <li>Mensajes de audio</li>
+    </ul>
+    <p>Usos comunes de <strong>&lt;video&gt;</strong>:</p>
+    <ul>
+      <li>Tutoriales y cursos online</li>
+      <li>Presentaciones de productos</li>
+      <li>Testimonios en video</li>
+      <li>Videos de fondo (background videos)</li>
+      <li>Videoclips y trailers</li>
+    </ul>
+    <p>
+      <strong>Ventaja principal:</strong> Ambas etiquetas ofrecen controles
+      nativos del navegador, compatibilidad multiplataforma y APIs de JavaScript
+      para control avanzado.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>
+      A continuación se explican en detalle los atributos más importantes
+      (compartidos por ambas etiquetas):
+    </p>
+
+    <h3>src</h3>
+    <p>
+      Especifica la ruta o URL del archivo multimedia. Puede ser una ruta
+      relativa, absoluta o una URL completa. Alternativamente, se pueden usar
+      elementos <strong>&lt;source&gt;</strong> hijos para proporcionar
+      múltiples formatos.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;audio src="cancion.mp3"&gt;&lt;/audio&gt;</code>
+    </p>
+
+    <h3>controls</h3>
+    <p>
+      Muestra los controles de reproducción nativos del navegador (play, pausa,
+      volumen, progreso). Es un atributo booleano. Sin este atributo, el usuario
+      no podrá controlar la reproducción a menos que uses JavaScript
+      personalizado.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;video src="video.mp4" controls&gt;&lt;/video&gt;</code>
+    </p>
+
+    <h3>autoplay</h3>
+    <p>
+      Inicia la reproducción automáticamente cuando la página carga. Es un
+      atributo booleano. Nota importante: muchos navegadores bloquean autoplay
+      con audio a menos que el video esté silenciado (muted).
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;audio src="musica.mp3" autoplay&gt;&lt;/audio&gt;</code>
+    </p>
+
+    <h3>loop</h3>
+    <p>
+      Repite la reproducción del contenido en bucle infinito. Es un atributo
+      booleano. Útil para música de fondo o videos ambientales.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;video src="fondo.mp4" loop&gt;&lt;/video&gt;</code>
+    </p>
+
+    <h3>muted</h3>
+    <p>
+      Silencia el audio por defecto. Es un atributo booleano. Esencial si
+      quieres usar autoplay en videos, ya que los navegadores modernos permiten
+      autoplay solo si el contenido está silenciado.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;video src="video.mp4" autoplay muted&gt;&lt;/video&gt;</code>
+    </p>
+
+    <h3>preload</h3>
+    <p>
+      Indica al navegador cómo debe precargar el archivo. Valores:
+      <strong>none</strong> (no precargar), <strong>metadata</strong> (solo
+      metadatos como duración), <strong>auto</strong> (precargar todo el
+      archivo, por defecto).
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;audio src="podcast.mp3" preload="metadata"&gt;&lt;/audio&gt;</code
+      >
+    </p>
+
+    <p>Atributos específicos de cada etiqueta:</p>
+
+    <h3>poster (solo para &lt;video&gt;)</h3>
+    <p>
+      Especifica la URL de una imagen que se muestra como vista previa antes de
+      que el video comience a reproducirse. Mejora la experiencia del usuario
+      mostrando una imagen representativa.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;video src="video.mp4"
+        poster="miniatura.jpg"&gt;&lt;/video&gt;</code
+      >
+    </p>
+
+    <h3>width y height (solo para &lt;video&gt;)</h3>
+    <p>
+      Definen las dimensiones del reproductor de video en píxeles. Ayuda al
+      navegador a reservar espacio y mantener la proporción correcta. Si solo se
+      especifica uno, el otro se ajusta automáticamente manteniendo el aspect
+      ratio.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;video src="video.mp4" width="640"
+        height="360"&gt;&lt;/video&gt;</code
+      >
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;!-- Audio básico --&gt;
+&lt;audio controls&gt;
+  &lt;source src="cancion.mp3" type="audio/mpeg"&gt;
+  &lt;source src="cancion.ogg" type="audio/ogg"&gt;
+  Tu navegador no soporta audio HTML5.
+&lt;/audio&gt;
+
+&lt;!-- Video básico --&gt;
+&lt;video controls width="640" height="360"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  Tu navegador no soporta video HTML5.
+&lt;/video&gt;
+
+&lt;!-- Video con autoplay (necesita muted) --&gt;
+&lt;video autoplay muted loop poster="vista-previa.jpg" width="100%"&gt;
+  &lt;source src="fondo.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+&lt;!-- Audio con precarga solo de metadatos --&gt;
+&lt;audio controls preload="metadata"&gt;
+  &lt;source src="podcast.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Ambas etiquetas requieren etiqueta de cierre (no son vacías)</li>
+      <li>
+        Usar múltiples &lt;source&gt; para compatibilidad con diferentes
+        navegadores
+      </li>
+      <li>Formatos comunes de audio: MP3, OGG, WAV</li>
+      <li>Formatos comunes de video: MP4, WebM, OGG</li>
+      <li>
+        El autoplay con sonido está bloqueado en la mayoría de navegadores
+        modernos
+      </li>
+      <li>
+        Siempre incluye texto alternativo entre las etiquetas para navegadores
+        sin soporte
+      </li>
+      <li>
+        Considera el tamaño de los archivos multimedia para optimizar el
+        rendimiento
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

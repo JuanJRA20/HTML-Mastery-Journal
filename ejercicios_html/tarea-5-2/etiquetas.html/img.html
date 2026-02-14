@@ -1,0 +1,178 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta IMG</title>
+    <meta name="description" content="Descripción de la etiqueta IMG" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta IMG" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta IMG</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta IMG?</h2>
+    <p>
+      La etiqueta <strong>&lt;img&gt;</strong> se utiliza para insertar imágenes
+      en una página web. Es una etiqueta vacía que no requiere etiqueta de
+      cierre.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;img&gt;</strong> es un elemento en línea que
+      incrusta una imagen en el documento. A diferencia de los fondos CSS, las
+      imágenes insertadas con <strong>&lt;img&gt;</strong> son parte del
+      contenido del documento.
+    </p>
+    <p>Usos comunes de <strong>&lt;img&gt;</strong>:</p>
+    <ul>
+      <li>Fotografías y gráficos del contenido</li>
+      <li>Logotipos de la empresa</li>
+      <li>Ilustraciones y diagramas</li>
+      <li>Iconos que forman parte del contenido (no decorativos)</li>
+      <li>Imágenes de productos en tiendas online</li>
+      <li>Avatares de usuarios</li>
+    </ul>
+    <p>
+      <strong>Importante:</strong> Las imágenes puramente decorativas deberían
+      manejarse con CSS. La etiqueta <strong>&lt;img&gt;</strong> es para
+      imágenes que forman parte del contenido y aportan información.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>A continuación se explican en detalle los atributos más importantes:</p>
+
+    <h3>src</h3>
+    <p>
+      Especifica la ruta o URL de la imagen. Es obligatorio. Puede ser una ruta
+      relativa, absoluta o una URL completa. Sin este atributo, la imagen no se
+      mostrará.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong> <code>&lt;img src="imagen.jpg"&gt;</code> o
+      <code>&lt;img src="https://ejemplo.com/foto.png"&gt;</code>
+    </p>
+
+    <h3>alt</h3>
+    <p>
+      Proporciona texto alternativo que describe la imagen. Es esencial para
+      accesibilidad (lectores de pantalla) y SEO. Se muestra si la imagen no
+      carga. Aunque técnicamente es opcional, debe considerarse obligatorio en
+      la práctica.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;img src="perro.jpg" alt="Perro golden retriever jugando en el
+        parque"&gt;</code
+      >
+    </p>
+
+    <h3>width</h3>
+    <p>
+      Define el ancho de la imagen en píxeles. Especificar dimensiones ayuda al
+      navegador a reservar espacio antes de cargar la imagen, mejorando el
+      rendimiento y evitando saltos de layout.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;img src="foto.jpg" width="300"&gt;</code>
+    </p>
+
+    <h3>height</h3>
+    <p>
+      Define el alto de la imagen en píxeles. Se recomienda usar junto con
+      <strong>width</strong> para mantener la proporción correcta y optimizar la
+      carga de la página.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;img src="foto.jpg" width="300" height="200"&gt;</code>
+    </p>
+
+    <h3>loading</h3>
+    <p>
+      Controla cómo se carga la imagen. Valores: <strong>lazy</strong> (carga
+      diferida cuando está cerca del viewport, ahorra ancho de banda),
+      <strong>eager</strong> (carga inmediata, por defecto). Muy útil para
+      optimizar rendimiento.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;img src="imagen.jpg" loading="lazy"&gt;</code>
+    </p>
+
+    <p>Otros atributos menos comunes pero útiles:</p>
+    <ul>
+      <li>
+        <strong>srcset</strong> - Especifica múltiples fuentes de imagen para
+        diferentes resoluciones de pantalla (responsive images)
+      </li>
+      <li>
+        <strong>sizes</strong> - Define tamaños de imagen según el ancho del
+        viewport, trabaja junto con srcset
+      </li>
+      <li>
+        <strong>title</strong> - Muestra un tooltip al pasar el mouse sobre la
+        imagen
+      </li>
+    </ul>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;!-- Imagen básica --&gt;
+&lt;img src="paisaje.jpg" alt="Montañas al atardecer"&gt;
+
+&lt;!-- Imagen con dimensiones --&gt;
+&lt;img src="logo.png" alt="Logo de la empresa" width="200" height="100"&gt;
+
+&lt;!-- Imagen con carga diferida --&gt;
+&lt;img src="foto-grande.jpg" 
+     alt="Fotografía de la ciudad" 
+     width="800" 
+     height="600" 
+     loading="lazy"&gt;
+
+&lt;!-- Imagen responsive --&gt;
+&lt;img src="imagen-small.jpg" 
+     srcset="imagen-small.jpg 400w, 
+             imagen-medium.jpg 800w, 
+             imagen-large.jpg 1200w"
+     sizes="(max-width: 600px) 400px, 
+            (max-width: 900px) 800px, 
+            1200px"
+     alt="Imagen adaptable"&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Es una etiqueta vacía (no tiene &lt;/img&gt; de cierre)</li>
+      <li>El atributo alt es crucial para accesibilidad y SEO</li>
+      <li>Especificar width y height previene saltos de contenido al cargar</li>
+      <li>Usa loading="lazy" para imágenes fuera del viewport inicial</li>
+      <li>
+        Formatos comunes: JPG (fotos), PNG (transparencias), SVG (vectores),
+        WebP (moderno, mejor compresión)
+      </li>
+      <li>
+        Las imágenes deben optimizarse antes de subirse (comprimir, dimensiones
+        adecuadas)
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

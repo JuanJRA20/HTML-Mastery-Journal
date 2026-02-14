@@ -1,0 +1,109 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta SPAN</title>
+    <meta name="description" content="Descripción de la etiqueta SPAN" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta SPAN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta SPAN</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta SPAN?</h2>
+    <p>
+      La etiqueta <strong>&lt;span&gt;</strong> es un contenedor en línea
+      genérico sin significado semántico. Se utiliza para aplicar estilos o
+      manipular con JavaScript porciones específicas de texto.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;span&gt;</strong> es un elemento en línea neutral
+      que no tiene significado semántico por sí mismo. Es el equivalente en
+      línea de <strong>&lt;div&gt;</strong> (que es de bloque). Se usa
+      principalmente como gancho para aplicar estilos CSS o JavaScript a partes
+      específicas del texto.
+    </p>
+    <p>Usos comunes de <strong>&lt;span&gt;</strong>:</p>
+    <ul>
+      <li>Aplicar color o estilos a palabras específicas</li>
+      <li>Cambiar la fuente de una parte del texto</li>
+      <li>Añadir iconos o símbolos dentro de texto</li>
+      <li>Marcar texto para manipulación con JavaScript</li>
+      <li>Aplicar clases CSS a fragmentos de texto</li>
+    </ul>
+    <p>
+      <strong>Regla importante:</strong> Solo usa
+      <strong>&lt;span&gt;</strong> cuando no exista una etiqueta semántica más
+      apropiada. Por ejemplo, usa <strong>&lt;strong&gt;</strong> para
+      importancia, <strong>&lt;em&gt;</strong> para énfasis,
+      <strong>&lt;code&gt;</strong> para código, etc.
+      <strong>&lt;span&gt;</strong> es el último recurso.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>
+      La etiqueta <strong>&lt;span&gt;</strong> no tiene atributos específicos
+      propios, pero acepta todos los atributos globales de HTML5, siendo los más
+      comunes:
+    </p>
+    <ul>
+      <li><strong>id</strong> - Identificador único del elemento</li>
+      <li>
+        <strong>class</strong> - Clase CSS para aplicar estilos (el más usado)
+      </li>
+      <li><strong>style</strong> - Estilos CSS inline</li>
+    </ul>
+    <p>
+      De hecho, <strong>&lt;span&gt;</strong> raramente se usa sin atributos, ya
+      que su propósito principal es servir como contenedor para aplicar estilos
+      o scripts.
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;p&gt;
+  El precio es &lt;span class="precio"&gt;29,99€&lt;/span&gt; 
+  con descuento.
+&lt;/p&gt;
+
+&lt;p&gt;
+  Mi color favorito es el 
+  &lt;span style="color: blue;"&gt;azul&lt;/span&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+  Haz clic &lt;span id="contador"&gt;0&lt;/span&gt; veces.
+&lt;/p&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Es un elemento en línea (no genera salto de línea)</li>
+      <li>No tiene significado semántico, es puramente para presentación</li>
+      <li>
+        Preferir etiquetas semánticas cuando sea posible (&lt;strong&gt;,
+        &lt;em&gt;, &lt;code&gt;, etc.)
+      </li>
+      <li>Muy utilizado en combinación con clases CSS</li>
+      <li>Es el contenedor más pequeño y específico en HTML</li>
+      <li>Por defecto, no aplica ningún estilo visual</li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

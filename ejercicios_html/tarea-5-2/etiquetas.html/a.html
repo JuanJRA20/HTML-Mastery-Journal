@@ -1,0 +1,184 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta A</title>
+    <meta name="description" content="Descripción de la etiqueta A" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta A" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta A</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta A?</h2>
+    <p>
+      La etiqueta <strong>&lt;a&gt;</strong> (anchor/ancla) crea hipervínculos
+      que permiten navegar a otras páginas web, recursos, secciones del mismo
+      documento o iniciar descargas.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;a&gt;</strong> es uno de los elementos más
+      fundamentales de la web, ya que crea los enlaces que conectan documentos
+      entre sí. Es un elemento en línea que puede contener texto, imágenes u
+      otros elementos en línea.
+    </p>
+    <p>Tipos de enlaces con <strong>&lt;a&gt;</strong>:</p>
+    <ul>
+      <li>Enlaces a otras páginas web (URLs externas o internas)</li>
+      <li>Enlaces a secciones dentro de la misma página (anclas con #id)</li>
+      <li>Enlaces para enviar correos electrónicos (mailto:)</li>
+      <li>Enlaces para realizar llamadas telefónicas (tel:)</li>
+      <li>Enlaces para descargar archivos</li>
+    </ul>
+    <p>
+      <strong>Elemento fundamental:</strong> Sin la etiqueta
+      <strong>&lt;a&gt;</strong>, la World Wide Web tal como la conocemos no
+      existiría. Los hipervínculos son la base de la navegación web.
+    </p>
+
+    <h2>Atributos principales</h2>
+
+    <h3>href</h3>
+    <p>
+      Especifica la URL de destino del enlace. Es el atributo más importante y
+      casi siempre está presente. Puede ser una URL completa, una ruta relativa,
+      un ancla (#id), o protocolos especiales como mailto: o tel:.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;a href="https://ejemplo.com"&gt;Enlace&lt;/a&gt;</code>
+    </p>
+
+    <h3>target</h3>
+    <p>
+      Define dónde se abrirá el enlace. Los valores más comunes son
+      <strong>_blank</strong> (nueva pestaña/ventana),
+      <strong>_self</strong> (misma ventana, por defecto),
+      <strong>_parent</strong> y <strong>_top</strong>.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;a href="pagina.html" target="_blank"&gt;Abrir en nueva
+        pestaña&lt;/a&gt;</code
+      >
+    </p>
+
+    <h3>rel</h3>
+    <p>
+      Define la relación entre el documento actual y el enlazado. Valores
+      importantes: <strong>nofollow</strong> (no seguir para SEO),
+      <strong>noopener</strong> (seguridad con target="_blank"),
+      <strong>noreferrer</strong> (no enviar información de origen),
+      <strong>external</strong> (enlace externo).
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;a href="externo.com" target="_blank" rel="noopener
+        noreferrer"&gt;Enlace seguro&lt;/a&gt;</code
+      >
+    </p>
+
+    <h3>download</h3>
+    <p>
+      Indica que al hacer clic se descargará el recurso en lugar de navegar a
+      él. Opcionalmente puede especificar el nombre de archivo sugerido para la
+      descarga.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;a href="documento.pdf" download="mi-documento.pdf"&gt;Descargar
+        PDF&lt;/a&gt;</code
+      >
+    </p>
+
+    <h3>title</h3>
+    <p>
+      Proporciona información adicional sobre el enlace que aparece como tooltip
+      al pasar el mouse. Útil para accesibilidad y contexto adicional.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;a href="contacto.html" title="Ir a la página de
+        contacto"&gt;Contacto&lt;/a&gt;</code
+      >
+    </p>
+
+    <h3>hreflang</h3>
+    <p>
+      Indica el idioma del documento enlazado. Útil para sitios multiidioma y
+      mejora el SEO internacional.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;a href="about-en.html" hreflang="en"&gt;About us&lt;/a&gt;</code
+      >
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;!-- Enlace simple --&gt;
+&lt;a href="contacto.html"&gt;Contacto&lt;/a&gt;
+
+&lt;!-- Enlace externo en nueva pestaña --&gt;
+&lt;a href="https://ejemplo.com" target="_blank" rel="noopener noreferrer"&gt;
+  Visitar sitio externo
+&lt;/a&gt;
+
+&lt;!-- Enlace a sección de la página --&gt;
+&lt;a href="#seccion-importante"&gt;Ir a sección&lt;/a&gt;
+
+&lt;!-- Enlace de correo --&gt;
+&lt;a href="mailto:info@ejemplo.com"&gt;Enviar correo&lt;/a&gt;
+
+&lt;!-- Enlace de descarga --&gt;
+&lt;a href="archivo.pdf" download&gt;Descargar PDF&lt;/a&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>
+        Es un elemento en línea pero puede contener elementos de bloque en HTML5
+      </li>
+      <li>
+        Sin href, técnicamente es un "marcador de posición" para enlace futuro
+      </li>
+      <li>
+        Siempre usa rel="noopener noreferrer" con target="_blank" por seguridad
+      </li>
+      <li>
+        Los enlaces deben tener texto descriptivo, no "haz clic aquí"
+        (accesibilidad)
+      </li>
+      <li>
+        Pueden contener imágenes: &lt;a href="..."&gt;&lt;img
+        src="..."&gt;&lt;/a&gt;
+      </li>
+      <li>
+        Los navegadores aplican estilos por defecto (azul, subrayado para no
+        visitados)
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

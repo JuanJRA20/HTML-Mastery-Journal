@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta META</title>
+    <meta name="description" content="Descripción de la etiqueta META" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta META" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta META</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta META?</h2>
+    <p>
+      La etiqueta <strong>&lt;meta&gt;</strong> proporciona metadatos sobre el
+      documento HTML. Estos metadatos no son visibles en la página, pero son
+      leídos por navegadores, motores de búsqueda y redes sociales.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;meta&gt;</strong> se coloca siempre dentro del
+      <strong>&lt;head&gt;</strong> y es una etiqueta vacía (no tiene etiqueta
+      de cierre). Se utiliza para definir información como:
+    </p>
+    <ul>
+      <li>Codificación de caracteres del documento</li>
+      <li>Descripción de la página para buscadores</li>
+      <li>Configuración del viewport para diseño responsive</li>
+      <li>Información para redes sociales (Open Graph)</li>
+      <li>Autor y palabras clave del contenido</li>
+    </ul>
+
+    <h2>Atributos principales</h2>
+
+    <h3>charset</h3>
+    <p>
+      Define la codificación de caracteres del documento. Casi siempre se usa
+      UTF-8.
+    </p>
+    <p><strong>Ejemplo:</strong> <code>&lt;meta charset="UTF-8"&gt;</code></p>
+
+    <h3>name y content</h3>
+    <p>
+      Se usan en combinación para definir metadatos generales. El atributo
+      <strong>name</strong> especifica el tipo de metadato y
+      <strong>content</strong> su valor.
+    </p>
+    <p><strong>Combinaciones comunes:</strong></p>
+    <ul>
+      <li>
+        <code
+          >&lt;meta name="description" content="Descripción de la
+          página"&gt;</code
+        >
+        - Para SEO
+      </li>
+      <li>
+        <code>&lt;meta name="keywords" content="html, meta, tutorial"&gt;</code>
+        - Palabras clave (poco usado hoy)
+      </li>
+      <li>
+        <code>&lt;meta name="author" content="Nombre del autor"&gt;</code> -
+        Autor del documento
+      </li>
+      <li>
+        <code
+          >&lt;meta name="viewport" content="width=device-width,
+          initial-scale=1"&gt;</code
+        >
+        - Para diseño responsive
+      </li>
+    </ul>
+
+    <h3>http-equiv y content</h3>
+    <p>
+      Proporciona instrucciones al navegador similares a cabeceras HTTP. Se usa
+      con <strong>content</strong> para el valor.
+    </p>
+    <p><strong>Combinaciones comunes:</strong></p>
+    <ul>
+      <li>
+        <code>&lt;meta http-equiv="refresh" content="30"&gt;</code> - Refresca
+        la página cada 30 segundos
+      </li>
+      <li>
+        <code>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</code>
+        - Compatibilidad con Internet Explorer
+      </li>
+    </ul>
+
+    <h3>property y content</h3>
+    <p>
+      Se usa para metadatos de Open Graph (redes sociales como Facebook,
+      Twitter). El atributo <strong>property</strong> define el tipo y
+      <strong>content</strong> su valor.
+    </p>
+    <p><strong>Combinaciones comunes:</strong></p>
+    <ul>
+      <li>
+        <code
+          >&lt;meta property="og:title" content="Título para redes
+          sociales"&gt;</code
+        >
+      </li>
+      <li>
+        <code
+          >&lt;meta property="og:description" content="Descripción para redes
+          sociales"&gt;</code
+        >
+      </li>
+      <li>
+        <code
+          >&lt;meta property="og:image" content="url-de-imagen.jpg"&gt;</code
+        >
+      </li>
+    </ul>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="description" content="Tutorial de HTML5"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;meta property="og:title" content="Mi Sitio Web"&gt;
+&lt;/head&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Es una etiqueta vacía (no tiene &lt;/meta&gt;)</li>
+      <li>Puede haber múltiples etiquetas &lt;meta&gt; en un documento</li>
+      <li>
+        La etiqueta &lt;meta charset="UTF-8"&gt; debe ser una de las primeras
+        dentro del &lt;head&gt;
+      </li>
+      <li>
+        El metadato "viewport" es esencial para diseño responsive en
+        dispositivos móviles
+      </li>
+      <li>Los metadatos de descripción influyen directamente en el SEO</li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

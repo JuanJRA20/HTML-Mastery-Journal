@@ -1,0 +1,163 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Las Etiquetas UL, OL y LI</title>
+    <meta
+      name="description"
+      content="Descripción de las etiquetas de listas UL, OL y LI"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="Las Etiquetas UL, OL y LI" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>Las Etiquetas UL, OL y LI</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué son las etiquetas UL, OL y LI?</h2>
+    <p>
+      Las etiquetas <strong>&lt;ul&gt;</strong> (unordered list),
+      <strong>&lt;ol&gt;</strong> (ordered list) y
+      <strong>&lt;li&gt;</strong> (list item) se utilizan para crear listas en
+      HTML. <strong>&lt;ul&gt;</strong> crea listas sin orden específico,
+      <strong>&lt;ol&gt;</strong> crea listas numeradas, y
+      <strong>&lt;li&gt;</strong> define cada elemento de la lista.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      Las listas son elementos de bloque fundamentales para organizar
+      información relacionada. Existen dos tipos principales:
+    </p>
+    <ul>
+      <li>
+        <strong>&lt;ul&gt;</strong> - Lista desordenada (unordered list): Los
+        elementos se marcan con viñetas (bullets). Se usa cuando el orden de los
+        elementos no importa.
+      </li>
+      <li>
+        <strong>&lt;ol&gt;</strong> - Lista ordenada (ordered list): Los
+        elementos se numeran automáticamente. Se usa cuando el orden o secuencia
+        es importante.
+      </li>
+      <li>
+        <strong>&lt;li&gt;</strong> - Elemento de lista (list item): Cada ítem
+        individual dentro de una lista <strong>&lt;ul&gt;</strong> o
+        <strong>&lt;ol&gt;</strong>.
+      </li>
+    </ul>
+    <p>Casos de uso comunes:</p>
+    <ul>
+      <li>Menús de navegación</li>
+      <li>Características de productos</li>
+      <li>Pasos de instrucciones (ol)</li>
+      <li>Listas de ingredientes o materiales</li>
+      <li>Rankings o clasificaciones (ol)</li>
+    </ul>
+
+    <h2>Atributos principales</h2>
+
+    <h3>type (para &lt;ol&gt;)</h3>
+    <p>
+      Define el tipo de numeración para listas ordenadas. Valores:
+      <strong>1</strong> (números, por defecto), <strong>A</strong> (letras
+      mayúsculas), <strong>a</strong> (letras minúsculas),
+      <strong>I</strong> (romanos mayúsculas), <strong>i</strong> (romanos
+      minúsculas).
+    </p>
+    <p><strong>Ejemplo:</strong> <code>&lt;ol type="A"&gt;</code></p>
+
+    <h3>start (para &lt;ol&gt;)</h3>
+    <p>
+      Especifica el número con el que comienza la numeración de la lista. Por
+      defecto es 1.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong> <code>&lt;ol start="5"&gt;</code> - La lista
+      comenzará en 5.
+    </p>
+
+    <h3>reversed (para &lt;ol&gt;)</h3>
+    <p>
+      Invierte el orden de la numeración (cuenta hacia atrás). Es un atributo
+      booleano.
+    </p>
+    <p><strong>Ejemplo:</strong> <code>&lt;ol reversed&gt;</code></p>
+
+    <h3>value (para &lt;li&gt; dentro de &lt;ol&gt;)</h3>
+    <p>
+      Establece un valor específico para un elemento de lista ordenada,
+      alterando la secuencia numérica.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong> <code>&lt;li value="10"&gt;</code> - Este ítem
+      será número 10.
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;!-- Lista desordenada --&gt;
+&lt;ul&gt;
+  &lt;li&gt;Manzanas&lt;/li&gt;
+  &lt;li&gt;Naranjas&lt;/li&gt;
+  &lt;li&gt;Plátanos&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Lista ordenada --&gt;
+&lt;ol&gt;
+  &lt;li&gt;Abrir el navegador&lt;/li&gt;
+  &lt;li&gt;Ir a la URL&lt;/li&gt;
+  &lt;li&gt;Iniciar sesión&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Lista con letras --&gt;
+&lt;ol type="A"&gt;
+  &lt;li&gt;Primera opción&lt;/li&gt;
+  &lt;li&gt;Segunda opción&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Listas anidadas --&gt;
+&lt;ul&gt;
+  &lt;li&gt;Frutas
+    &lt;ul&gt;
+      &lt;li&gt;Manzanas&lt;/li&gt;
+      &lt;li&gt;Naranjas&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Verduras&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Solo &lt;li&gt; puede ser hijo directo de &lt;ul&gt; o &lt;ol&gt;</li>
+      <li>Las listas pueden anidarse (listas dentro de listas)</li>
+      <li>No usar listas solo para indentación visual (usa CSS en su lugar)</li>
+      <li>
+        Los navegadores aplican estilos por defecto (viñetas, números, márgenes)
+      </li>
+      <li>
+        Las listas mejoran la accesibilidad al estructurar información
+        relacionada
+      </li>
+      <li>
+        Existe también &lt;dl&gt; (definition list) para listas de términos y
+        definiciones
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

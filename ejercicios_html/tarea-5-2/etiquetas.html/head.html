@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta HEAD</title>
+    <meta name="description" content="Descripción de la etiqueta HEAD" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta HEAD" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta HEAD</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta HEAD?</h2>
+    <p>
+      La etiqueta <strong>&lt;head&gt;</strong> es el contenedor de metadatos
+      del documento HTML. Contiene información sobre la página que no se muestra
+      directamente al usuario, pero que es esencial para el navegador,
+      buscadores y otros servicios.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;head&gt;</strong> se coloca siempre después de la
+      etiqueta de apertura <strong>&lt;html&gt;</strong> y antes de
+      <strong>&lt;body&gt;</strong>. Todo lo que está dentro del
+      <strong>&lt;head&gt;</strong> es información "invisible" para el visitante
+      de la página, pero crucial para su correcto funcionamiento.
+    </p>
+    <p>Dentro del <strong>&lt;head&gt;</strong> se incluyen elementos como:</p>
+    <ul>
+      <li>
+        <strong>&lt;title&gt;</strong> - El título que aparece en la pestaña del
+        navegador
+      </li>
+      <li>
+        <strong>&lt;meta&gt;</strong> - Metadatos diversos (charset, viewport,
+        descripción, etc.)
+      </li>
+      <li>
+        <strong>&lt;link&gt;</strong> - Enlaces a hojas de estilo CSS y otros
+        recursos externos
+      </li>
+      <li>
+        <strong>&lt;script&gt;</strong> - Referencias a archivos JavaScript
+        (aunque también pueden ir en el body)
+      </li>
+      <li><strong>&lt;style&gt;</strong> - Estilos CSS internos</li>
+    </ul>
+
+    <h2>Atributos principales</h2>
+    <p>
+      La etiqueta <strong>&lt;head&gt;</strong> acepta los siguientes atributos
+      globales:
+    </p>
+    <ul>
+      <li><strong>id</strong> - Identificador único del elemento</li>
+      <li><strong>class</strong> - Clase CSS para aplicar estilos</li>
+    </ul>
+    <p>
+      En la práctica, estos atributos casi nunca se utilizan en la etiqueta
+      <strong>&lt;head&gt;</strong>.
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Mi Página Web&lt;/title&gt;
+  &lt;link rel="stylesheet" href="estilos.css"&gt;
+&lt;/head&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Debe haber solo una etiqueta &lt;head&gt; por documento</li>
+      <li>Es obligatoria en todo documento HTML válido</li>
+      <li>Debe contener al menos un elemento &lt;title&gt;</li>
+      <li>
+        El contenido del &lt;head&gt; no es visible en la página, pero afecta su
+        comportamiento y apariencia
+      </li>
+      <li>Es donde se definen metadatos críticos para SEO y redes sociales</li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

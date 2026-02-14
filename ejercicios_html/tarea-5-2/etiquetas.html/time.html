@@ -1,0 +1,108 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta TIME</title>
+    <meta name="description" content="Descripción de la etiqueta TIME" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta TIME" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta TIME</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta TIME?</h2>
+    <p>
+      La etiqueta <strong>&lt;time&gt;</strong> representa una fecha, hora o
+      duración específica en un formato legible tanto para humanos como para
+      máquinas.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;time&gt;</strong> es un elemento semántico en
+      línea introducido en HTML5 que marca fechas y horas de manera que los
+      navegadores, buscadores y otras aplicaciones puedan procesarlas
+      automáticamente.
+    </p>
+    <p>Usos apropiados de <strong>&lt;time&gt;</strong>:</p>
+    <ul>
+      <li>Fechas de publicación de artículos</li>
+      <li>Fechas de eventos</li>
+      <li>Horarios de apertura de negocios</li>
+      <li>Timestamps en comentarios o posts</li>
+      <li>Duraciones (como duración de un video)</li>
+      <li>Rangos de fechas</li>
+    </ul>
+    <p>
+      <strong>Ventaja principal:</strong> Permite mostrar fechas en formato
+      amigable para usuarios (ej: "14 de febrero de 2026") mientras se
+      proporciona un formato estándar para máquinas mediante el atributo
+      <strong>datetime</strong>.
+    </p>
+
+    <h2>Atributos principales</h2>
+
+    <h3>datetime</h3>
+    <p>
+      Especifica la fecha/hora en un formato estándar legible por máquinas. Si
+      no se especifica, el contenido del elemento debe ser una fecha/hora
+      válida.
+    </p>
+    <p><strong>Formatos comunes:</strong></p>
+    <ul>
+      <li><code>datetime="2026-02-14"</code> - Solo fecha</li>
+      <li><code>datetime="2026-02-14T14:30"</code> - Fecha y hora</li>
+      <li>
+        <code>datetime="2026-02-14T14:30:00Z"</code> - Con zona horaria UTC
+      </li>
+      <li><code>datetime="PT2H30M"</code> - Duración (2 horas 30 minutos)</li>
+    </ul>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;p&gt;
+  Publicado el 
+  &lt;time datetime="2026-02-14"&gt;14 de febrero de 2026&lt;/time&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  El concierto comienza a las 
+  &lt;time datetime="2026-12-25T20:00"&gt;8:00 PM del 25 de diciembre&lt;/time&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  Duración del video: &lt;time datetime="PT1H30M"&gt;1 hora 30 minutos&lt;/time&gt;
+&lt;/p&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Es un elemento en línea (no genera salto de línea)</li>
+      <li>
+        El atributo datetime es opcional si el contenido ya está en formato
+        válido
+      </li>
+      <li>Mejora el SEO al proporcionar fechas en formato estructurado</li>
+      <li>Útil para que navegadores ofrezcan añadir eventos a calendarios</li>
+      <li>
+        Los buscadores usan esta información para mostrar fechas en resultados
+      </li>
+      <li>No tiene estilo visual por defecto, se muestra como texto normal</li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

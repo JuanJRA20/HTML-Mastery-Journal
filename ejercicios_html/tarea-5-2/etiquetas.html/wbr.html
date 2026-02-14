@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta WBR</title>
+    <meta name="description" content="Descripción de la etiqueta WBR" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta WBR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta WBR</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta WBR?</h2>
+    <p>
+      La etiqueta <strong>&lt;wbr&gt;</strong> (Word Break Opportunity) indica
+      un punto donde el navegador puede opcionalmente romper una línea si es
+      necesario, pero no fuerza el salto.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;wbr&gt;</strong> es un elemento vacío introducido
+      en HTML5 que sugiere un punto de ruptura opcional en palabras o URLs muy
+      largas. A diferencia de <strong>&lt;br&gt;</strong>, que siempre rompe la
+      línea, <strong>&lt;wbr&gt;</strong> solo lo hace si el navegador necesita
+      ajustar el texto al ancho disponible.
+    </p>
+    <p>Usos apropiados de <strong>&lt;wbr&gt;</strong>:</p>
+    <ul>
+      <li>URLs muy largas que podrían desbordar el contenedor</li>
+      <li>Palabras compuestas extremadamente largas</li>
+      <li>Rutas de archivos largas</li>
+      <li>Direcciones de correo electrónico muy largas</li>
+      <li>Código o identificadores largos sin espacios naturales</li>
+    </ul>
+    <p>
+      <strong>Funcionamiento:</strong> Si la palabra cabe en la línea,
+      <strong>&lt;wbr&gt;</strong> no hace nada. Si no cabe, el navegador puede
+      romper en ese punto sin añadir guion.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>
+      La etiqueta <strong>&lt;wbr&gt;</strong> no tiene atributos específicos.
+      Es una etiqueta vacía que raramente necesita atributos, aunque
+      técnicamente acepta atributos globales:
+    </p>
+    <ul>
+      <li><strong>id</strong> - Identificador único (raramente usado)</li>
+      <li><strong>class</strong> - Clase CSS (raramente usado)</li>
+    </ul>
+    <p>
+      En la práctica, <strong>&lt;wbr&gt;</strong> casi nunca lleva atributos.
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;p&gt;
+  Visita nuestra web en 
+  http://&lt;wbr&gt;www.&lt;wbr&gt;ejemplo&lt;wbr&gt;muylargoynecesita&lt;wbr&gt;romper.&lt;wbr&gt;com
+&lt;/p&gt;
+
+&lt;p&gt;
+  Archivo: C:\&lt;wbr&gt;Usuarios\&lt;wbr&gt;Documentos\&lt;wbr&gt;MiCarpeta\&lt;wbr&gt;archivo.txt
+&lt;/p&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Es una etiqueta vacía (no tiene &lt;/wbr&gt; de cierre)</li>
+      <li>Introducida en HTML5, no funciona en navegadores muy antiguos</li>
+      <li>No añade guion al romper la línea (a diferencia del CSS hyphen)</li>
+      <li>Solo rompe si es necesario por espacio, no siempre</li>
+      <li>Muy útil en diseño responsive para evitar desbordes horizontales</li>
+      <li>
+        Es una de las etiquetas más especializadas y menos utilizadas de HTML5
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta ADDRESS</title>
+    <meta name="description" content="Descripción de la etiqueta ADDRESS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta ADDRESS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta ADDRESS</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta ADDRESS?</h2>
+    <p>
+      La etiqueta <strong>&lt;address&gt;</strong> proporciona información de
+      contacto del autor o propietario de un documento o artículo. No se utiliza
+      para direcciones postales genéricas.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;address&gt;</strong> es un elemento semántico que
+      identifica información de contacto relacionada con el autor o responsable
+      del contenido más cercano (<strong>&lt;article&gt;</strong> o
+      <strong>&lt;body&gt;</strong>).
+    </p>
+    <p>Información apropiada para <strong>&lt;address&gt;</strong>:</p>
+    <ul>
+      <li>Dirección de correo electrónico del autor</li>
+      <li>Enlace al perfil del autor</li>
+      <li>Dirección física de una organización responsable del contenido</li>
+      <li>Número de teléfono de contacto del autor</li>
+      <li>Redes sociales del autor o empresa</li>
+    </ul>
+    <p>
+      <strong>Importante:</strong> No debe usarse para cualquier dirección
+      postal en la página. Solo para información de contacto del autor o
+      propietario del contenido. Por ejemplo, no usar
+      <strong>&lt;address&gt;</strong> para la dirección de envío en un
+      formulario de compra.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>
+      La etiqueta <strong>&lt;address&gt;</strong> no tiene atributos
+      específicos propios. Acepta los atributos globales de HTML5:
+    </p>
+    <ul>
+      <li><strong>id</strong> - Identificador único del elemento</li>
+      <li><strong>class</strong> - Clase CSS para aplicar estilos</li>
+    </ul>
+    <p>
+      Por defecto, los navegadores suelen mostrar el contenido de
+      <strong>&lt;address&gt;</strong> en cursiva.
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;footer&gt;
+  &lt;address&gt;
+    Contacto: &lt;a href="mailto:info@ejemplo.com"&gt;info@ejemplo.com&lt;/a&gt;&lt;br&gt;
+    Teléfono: +34 123 456 789&lt;br&gt;
+    Calle Ejemplo 123, Madrid, España
+  &lt;/address&gt;
+&lt;/footer&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>
+        Puede haber múltiples &lt;address&gt; en un documento (una por
+        autor/propietario)
+      </li>
+      <li>Comúnmente se coloca dentro de &lt;footer&gt;</li>
+      <li>
+        No puede contener elementos de encabezado (h1-h6), &lt;header&gt;,
+        &lt;footer&gt;, &lt;section&gt;, &lt;article&gt; u otro &lt;address&gt;
+      </li>
+      <li>
+        Mejora el SEO y la accesibilidad al identificar claramente información
+        de contacto
+      </li>
+      <li>
+        Solo para contacto del autor/propietario, no para direcciones
+        arbitrarias en el contenido
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta SECTION</title>
+    <meta name="description" content="Descripción de la etiqueta SECTION" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta SECTION" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta SECTION</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta SECTION?</h2>
+    <p>
+      La etiqueta <strong>&lt;section&gt;</strong> define una sección temática
+      del documento. Agrupa contenido relacionado bajo un mismo tema o
+      propósito.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;section&gt;</strong> es un elemento semántico
+      introducido en HTML5 que representa una sección genérica de un documento.
+      Cada <strong>&lt;section&gt;</strong> normalmente tiene su propio
+      encabezado (<strong>&lt;h1&gt;</strong>-<strong>&lt;h6&gt;</strong>).
+    </p>
+    <p>Se utiliza para dividir el contenido en partes temáticas como:</p>
+    <ul>
+      <li>Capítulos de un documento largo</li>
+      <li>Pestañas de contenido diferente</li>
+      <li>Secciones numeradas de una tesis</li>
+      <li>
+        Diferentes áreas temáticas de una página (servicios, testimonios,
+        contacto)
+      </li>
+    </ul>
+    <p>
+      <strong>Regla general:</strong> Si el contenido es independiente y puede
+      existir por sí solo, usa <strong>&lt;article&gt;</strong>. Si es
+      simplemente una agrupación temática dentro de un contexto mayor, usa
+      <strong>&lt;section&gt;</strong>.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>
+      La etiqueta <strong>&lt;section&gt;</strong> no tiene atributos
+      específicos propios. Acepta los atributos globales de HTML5:
+    </p>
+    <ul>
+      <li><strong>id</strong> - Identificador único del elemento</li>
+      <li><strong>class</strong> - Clase CSS para aplicar estilos</li>
+    </ul>
+    <p>
+      Estos atributos son especialmente útiles para aplicar estilos
+      diferenciados a cada sección o para crear enlaces de anclaje.
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;main&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Nuestros Servicios&lt;/h2&gt;
+    &lt;p&gt;Ofrecemos diseño web profesional...&lt;/p&gt;
+  &lt;/section&gt;
+  
+  &lt;section&gt;
+    &lt;h2&gt;Testimonios&lt;/h2&gt;
+    &lt;p&gt;Lo que dicen nuestros clientes...&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Puede haber múltiples &lt;section&gt; en un mismo documento</li>
+      <li>Cada &lt;section&gt; debería tener un encabezado (h1-h6)</li>
+      <li>
+        No usar &lt;section&gt; solo como contenedor de estilo (para eso está
+        &lt;div&gt;)
+      </li>
+      <li>
+        Si no puedes darle un título descriptivo a la sección, probablemente no
+        necesites &lt;section&gt;
+      </li>
+      <li>Mejora la estructura semántica y accesibilidad del documento</li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

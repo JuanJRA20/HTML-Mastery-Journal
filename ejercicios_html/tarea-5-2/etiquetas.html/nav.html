@@ -1,0 +1,104 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta NAV</title>
+    <meta name="description" content="Descripción de la etiqueta NAV" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta NAV" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta NAV</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta NAV?</h2>
+    <p>
+      La etiqueta <strong>&lt;nav&gt;</strong> define una sección de navegación
+      que contiene enlaces a otras páginas o a diferentes partes del mismo
+      documento.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;nav&gt;</strong> es un elemento semántico
+      introducido en HTML5 que se utiliza para agrupar los principales bloques
+      de navegación del sitio, como:
+    </p>
+    <ul>
+      <li>Menú principal del sitio web</li>
+      <li>Menú de navegación secundaria</li>
+      <li>Tabla de contenidos de un documento largo</li>
+      <li>Breadcrumbs (migas de pan) de navegación</li>
+      <li>Paginación de resultados</li>
+    </ul>
+    <p>
+      <strong>Importante:</strong> No todos los grupos de enlaces necesitan
+      estar en un <strong>&lt;nav&gt;</strong>. Esta etiqueta debe reservarse
+      para bloques de navegación principales o importantes. Enlaces secundarios
+      en el footer, por ejemplo, no necesitan estar en un
+      <strong>&lt;nav&gt;</strong>.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>
+      La etiqueta <strong>&lt;nav&gt;</strong> no tiene atributos específicos
+      propios. Acepta los atributos globales de HTML5:
+    </p>
+    <ul>
+      <li><strong>id</strong> - Identificador único del elemento</li>
+      <li><strong>class</strong> - Clase CSS para aplicar estilos</li>
+      <li>
+        <strong>aria-label</strong> - Etiqueta descriptiva para accesibilidad
+        (muy recomendado cuando hay múltiples &lt;nav&gt;)
+      </li>
+    </ul>
+    <p>
+      El atributo <strong>aria-label</strong> es especialmente útil cuando
+      tienes varios elementos <strong>&lt;nav&gt;</strong> en la misma página,
+      para diferenciarlos en lectores de pantalla.
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;nav aria-label="Navegación principal"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="inicio.html"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="servicios.html"&gt;Servicios&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contacto.html"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Puede haber múltiples &lt;nav&gt; en un mismo documento</li>
+      <li>No todos los enlaces de la página deben estar en un &lt;nav&gt;</li>
+      <li>
+        Mejora significativamente la accesibilidad para usuarios de lectores de
+        pantalla
+      </li>
+      <li>
+        Ayuda a los motores de búsqueda a identificar la estructura de
+        navegación del sitio
+      </li>
+      <li>
+        Generalmente se coloca dentro de &lt;header&gt; pero puede estar en
+        otras ubicaciones
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

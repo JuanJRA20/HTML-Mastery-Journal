@@ -1,0 +1,112 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta PRE</title>
+    <meta name="description" content="Descripción de la etiqueta PRE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta PRE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta PRE</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta PRE?</h2>
+    <p>
+      La etiqueta <strong>&lt;pre&gt;</strong> representa texto preformateado
+      que preserva exactamente los espacios, tabulaciones y saltos de línea tal
+      como aparecen en el código HTML.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;pre&gt;</strong> es un elemento de bloque que
+      muestra el contenido exactamente como está escrito, respetando todos los
+      espacios en blanco y saltos de línea. Los navegadores muestran el
+      contenido con una fuente monoespaciada por defecto.
+    </p>
+    <p>Usos apropiados de <strong>&lt;pre&gt;</strong>:</p>
+    <ul>
+      <li>
+        Bloques de código de programación (generalmente con
+        <strong>&lt;code&gt;</strong> dentro)
+      </li>
+      <li>Poesía o texto que requiere formato específico de líneas</li>
+      <li>Arte ASCII</li>
+      <li>Salida de terminal o consola</li>
+      <li>Diagramas de texto</li>
+      <li>
+        Cualquier contenido donde el espaciado y formato exacto sean importantes
+      </li>
+    </ul>
+    <p>
+      <strong>Comportamiento clave:</strong> A diferencia de otros elementos
+      HTML que colapsan múltiples espacios en uno,
+      <strong>&lt;pre&gt;</strong> mantiene todos los espacios y saltos de línea
+      exactamente como están escritos.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>
+      La etiqueta <strong>&lt;pre&gt;</strong> no tiene atributos específicos
+      propios. Acepta los atributos globales de HTML5:
+    </p>
+    <ul>
+      <li><strong>id</strong> - Identificador único del elemento</li>
+      <li><strong>class</strong> - Clase CSS para aplicar estilos</li>
+    </ul>
+    <p>
+      Comúnmente se usa <strong>class</strong> para aplicar estilos o temas de
+      resaltado de sintaxis.
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;pre&gt;
+function saludar() {
+    console.log("Hola Mundo");
+    return true;
+}
+&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;
+#!/bin/bash
+echo "Iniciando script..."
+cd /home/usuario
+ls -la
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Es un elemento de bloque (genera salto de línea)</li>
+      <li>Preserva todos los espacios, tabulaciones y saltos de línea</li>
+      <li>Se muestra con fuente monoespaciada por defecto</li>
+      <li>
+        Frecuentemente se combina con &lt;code&gt; para bloques de código:
+        &lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;
+      </li>
+      <li>
+        El texto dentro puede desbordar horizontalmente si las líneas son muy
+        largas
+      </li>
+      <li>
+        Útil para mantener el formato exacto sin necesidad de CSS complejo
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

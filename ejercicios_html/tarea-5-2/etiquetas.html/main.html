@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta MAIN</title>
+    <meta name="description" content="Descripción de la etiqueta MAIN" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta MAIN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta MAIN</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta MAIN?</h2>
+    <p>
+      La etiqueta <strong>&lt;main&gt;</strong> representa el contenido
+      principal y único del documento. Contiene la información central de la
+      página, excluyendo contenido repetido como navegación, headers o footers.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;main&gt;</strong> es un elemento semántico
+      introducido en HTML5 que identifica el contenido dominante del
+      <strong>&lt;body&gt;</strong>. Este contenido debe ser único para el
+      documento y no incluir elementos que se repiten en múltiples páginas,
+      como:
+    </p>
+    <ul>
+      <li>Barras de navegación</li>
+      <li>Encabezados del sitio</li>
+      <li>Pies de página</li>
+      <li>Barras laterales globales</li>
+      <li>
+        Formularios de búsqueda globales (a menos que sea la función principal
+        de la página)
+      </li>
+    </ul>
+    <p>
+      El contenido dentro de <strong>&lt;main&gt;</strong> debe ser el foco
+      principal de la página. Por ejemplo, en un blog sería el artículo
+      completo, en una tienda online sería el catálogo de productos, etc.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>
+      La etiqueta <strong>&lt;main&gt;</strong> no tiene atributos específicos
+      propios. Acepta los atributos globales de HTML5:
+    </p>
+    <ul>
+      <li><strong>id</strong> - Identificador único del elemento</li>
+      <li><strong>class</strong> - Clase CSS para aplicar estilos</li>
+    </ul>
+    <p>
+      Estos atributos se utilizan principalmente para aplicar estilos CSS
+      específicos al contenido principal.
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Mi Blog&lt;/h1&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+  &lt;/header&gt;
+  
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Título del artículo&lt;/h2&gt;
+      &lt;p&gt;Contenido principal único de esta página...&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+  
+  &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Solo puede haber un &lt;main&gt; visible por documento</li>
+      <li>
+        No debe ser descendiente de &lt;article&gt;, &lt;aside&gt;,
+        &lt;footer&gt;, &lt;header&gt; o &lt;nav&gt;
+      </li>
+      <li>
+        Mejora enormemente la accesibilidad, permitiendo a los usuarios saltar
+        directamente al contenido principal
+      </li>
+      <li>
+        Es crucial para SEO, indicando a los motores de búsqueda cuál es el
+        contenido más relevante
+      </li>
+      <li>No es obligatorio, pero es altamente recomendado en HTML5 moderno</li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

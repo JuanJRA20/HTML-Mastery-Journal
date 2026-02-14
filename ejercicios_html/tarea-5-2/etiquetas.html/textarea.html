@@ -1,0 +1,204 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta TEXTAREA</title>
+    <meta name="description" content="Descripción de la etiqueta TEXTAREA" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta TEXTAREA" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta TEXTAREA</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta TEXTAREA?</h2>
+    <p>
+      La etiqueta <strong>&lt;textarea&gt;</strong> crea un campo de texto
+      multilínea donde los usuarios pueden escribir contenido extenso como
+      comentarios, mensajes o descripciones.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;textarea&gt;</strong> es un control de formulario
+      que permite entrada de texto en múltiples líneas. A diferencia de
+      <strong>&lt;input type="text"&gt;</strong>, que es para texto corto de una
+      sola línea, <strong>&lt;textarea&gt;</strong> es ideal para contenido más
+      largo.
+    </p>
+    <p>Usos comunes de <strong>&lt;textarea&gt;</strong>:</p>
+    <ul>
+      <li>Campos de comentarios</li>
+      <li>Mensajes de contacto</li>
+      <li>Descripciones de productos o servicios</li>
+      <li>Reseñas y opiniones</li>
+      <li>Biografías de usuarios</li>
+      <li>Notas o anotaciones</li>
+      <li>Código fuente o texto preformateado</li>
+    </ul>
+    <p>
+      <strong>Diferencia clave:</strong> El contenido inicial se coloca entre
+      las etiquetas de apertura y cierre, no en un atributo
+      <strong>value</strong> como en <strong>&lt;input&gt;</strong>.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>A continuación se explican en detalle los atributos más importantes:</p>
+
+    <h3>name</h3>
+    <p>
+      Especifica el nombre del campo que se enviará al servidor. Es esencial
+      para identificar el contenido del textarea cuando se procesa el
+      formulario.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;textarea name="comentario"&gt;&lt;/textarea&gt;</code>
+    </p>
+
+    <h3>rows</h3>
+    <p>
+      Define el número de líneas visibles del textarea (altura). Controla
+      cuántas líneas de texto se muestran sin necesidad de scroll. El usuario
+      puede escribir más allá de este límite.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;textarea rows="5"&gt;&lt;/textarea&gt;</code>
+    </p>
+
+    <h3>cols</h3>
+    <p>
+      Define el ancho visible del textarea en número de caracteres. En la
+      práctica moderna, es más común controlar el ancho con CSS que con este
+      atributo.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;textarea cols="50"&gt;&lt;/textarea&gt;</code>
+    </p>
+
+    <h3>placeholder</h3>
+    <p>
+      Muestra un texto de ayuda dentro del campo que desaparece cuando el
+      usuario empieza a escribir. Útil para dar instrucciones o ejemplos al
+      usuario.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;textarea placeholder="Escribe tu mensaje
+        aquí..."&gt;&lt;/textarea&gt;</code
+      >
+    </p>
+
+    <h3>maxlength</h3>
+    <p>
+      Especifica el número máximo de caracteres permitidos. El navegador impide
+      escribir más allá de este límite. Útil para limitar la longitud de
+      comentarios o mensajes.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;textarea maxlength="500"&gt;&lt;/textarea&gt;</code>
+    </p>
+
+    <h3>required</h3>
+    <p>
+      Atributo booleano que hace obligatorio el campo. El formulario no se puede
+      enviar sin completarlo. Activa la validación HTML5 nativa.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;textarea name="mensaje" required&gt;&lt;/textarea&gt;</code>
+    </p>
+
+    <p>Otros atributos menos comunes pero útiles:</p>
+    <ul>
+      <li>
+        <strong>disabled</strong> - Atributo booleano que deshabilita el campo,
+        impidiendo interacción del usuario
+      </li>
+      <li>
+        <strong>readonly</strong> - Atributo booleano que hace el campo de solo
+        lectura (se puede ver pero no modificar)
+      </li>
+      <li>
+        <strong>autocomplete</strong> - Habilita (on) o deshabilita (off) el
+        autocompletado
+      </li>
+      <li>
+        <strong>autofocus</strong> - Atributo booleano que coloca el foco
+        automáticamente en este campo al cargar la página
+      </li>
+      <li>
+        <strong>wrap</strong> - Controla cómo se envía el texto con saltos de
+        línea (soft o hard)
+      </li>
+      <li>
+        <strong>spellcheck</strong> - Habilita (true) o deshabilita (false) la
+        corrección ortográfica del navegador
+      </li>
+    </ul>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;!-- Textarea básico --&gt;
+&lt;label for="comentario"&gt;Comentario:&lt;/label&gt;
+&lt;textarea id="comentario" name="comentario" rows="5" cols="50"&gt;
+&lt;/textarea&gt;
+
+&lt;!-- Textarea con placeholder y límite --&gt;
+&lt;textarea name="mensaje" 
+          placeholder="Escribe tu mensaje (máximo 500 caracteres)" 
+          maxlength="500" 
+          rows="8" 
+          required&gt;
+&lt;/textarea&gt;
+
+&lt;!-- Textarea con contenido predeterminado --&gt;
+&lt;textarea name="descripcion" rows="6"&gt;
+Este es el contenido inicial que aparece 
+cuando se carga la página.
+&lt;/textarea&gt;
+
+&lt;!-- Textarea de solo lectura --&gt;
+&lt;textarea name="terminos" rows="10" readonly&gt;
+Aquí van los términos y condiciones que el usuario
+puede leer pero no modificar...
+&lt;/textarea&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Requiere etiqueta de cierre &lt;/textarea&gt;</li>
+      <li>
+        El contenido inicial va entre las etiquetas, no en un atributo value
+      </li>
+      <li>
+        Los usuarios pueden redimensionar el textarea (se puede controlar con
+        CSS resize)
+      </li>
+      <li>Siempre asociar con &lt;label&gt; para accesibilidad</li>
+      <li>Los espacios y saltos de línea entre las etiquetas se preservan</li>
+      <li>Es un elemento en línea por defecto, pero se comporta como bloque</li>
+      <li>
+        Mejor controlar dimensiones con CSS que con rows/cols en diseño moderno
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta BR</title>
+    <meta name="description" content="Descripción de la etiqueta BR" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta BR</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta BR?</h2>
+    <p>
+      La etiqueta <strong>&lt;br&gt;</strong> produce un salto de línea (line
+      break) dentro del texto. Es una etiqueta vacía que no requiere etiqueta de
+      cierre.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;br&gt;</strong> es un elemento vacío que fuerza un
+      salto de línea en el punto donde se coloca, sin crear un nuevo párrafo. Es
+      útil cuando necesitas dividir líneas dentro de un mismo bloque de
+      contenido.
+    </p>
+    <p>Usos apropiados de <strong>&lt;br&gt;</strong>:</p>
+    <ul>
+      <li>
+        Direcciones postales (separar líneas de calle, ciudad, código postal)
+      </li>
+      <li>Poemas o versos (respetar la estructura de líneas)</li>
+      <li>Firmas de correo electrónico</li>
+      <li>Separar líneas en formularios de contacto</li>
+    </ul>
+    <p>
+      <strong>Uso incorrecto:</strong> NO uses múltiples
+      <strong>&lt;br&gt;</strong> consecutivos para crear espacios verticales.
+      Eso debe hacerse con CSS (margin, padding). Tampoco uses
+      <strong>&lt;br&gt;</strong> para separar párrafos; para eso está
+      <strong>&lt;p&gt;</strong>.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>
+      La etiqueta <strong>&lt;br&gt;</strong> no tiene atributos específicos. Al
+      ser una etiqueta vacía, raramente necesita atributos, aunque técnicamente
+      acepta atributos globales como:
+    </p>
+    <ul>
+      <li><strong>id</strong> - Identificador único (muy raramente usado)</li>
+      <li><strong>class</strong> - Clase CSS (muy raramente usado)</li>
+    </ul>
+    <p>
+      En la práctica, <strong>&lt;br&gt;</strong> casi nunca lleva atributos.
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;p&gt;
+  Calle Mayor 123&lt;br&gt;
+  28001 Madrid&lt;br&gt;
+  España
+&lt;/p&gt;
+
+&lt;p&gt;
+  Roses are red,&lt;br&gt;
+  Violets are blue,&lt;br&gt;
+  HTML is great,&lt;br&gt;
+  And so are you.
+&lt;/p&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Es una etiqueta vacía (no tiene &lt;/br&gt; de cierre)</li>
+      <li>
+        En XHTML se escribía &lt;br /&gt; pero en HTML5 solo &lt;br&gt; es
+        suficiente
+      </li>
+      <li>NO usar para crear espacios verticales (usa CSS en su lugar)</li>
+      <li>NO usar para separar párrafos (usa &lt;p&gt; en su lugar)</li>
+      <li>
+        Útil solo cuando el salto de línea es parte del contenido, no del diseño
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

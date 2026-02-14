@@ -1,0 +1,213 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta CANVAS</title>
+    <meta name="description" content="Descripción de la etiqueta CANVAS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta CANVAS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta CANVAS</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta CANVAS?</h2>
+    <p>
+      La etiqueta <strong>&lt;canvas&gt;</strong> proporciona un lienzo (canvas)
+      en el que se pueden dibujar gráficos dinámicamente mediante JavaScript. Es
+      fundamental para crear gráficos, animaciones, juegos y visualizaciones
+      interactivas.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;canvas&gt;</strong> es un elemento de HTML5 que
+      crea un área rectangular en la página donde se pueden renderizar gráficos
+      2D o 3D (con WebGL) usando JavaScript. Por sí solo, el elemento canvas no
+      muestra nada; requiere scripting para dibujar contenido.
+    </p>
+    <p>Usos comunes de <strong>&lt;canvas&gt;</strong>:</p>
+    <ul>
+      <li>Gráficos y visualizaciones de datos (charts, diagramas)</li>
+      <li>Juegos HTML5 (2D y 3D con WebGL)</li>
+      <li>Animaciones personalizadas</li>
+      <li>Manipulación y edición de imágenes</li>
+      <li>Efectos visuales y partículas</li>
+      <li>Firmas digitales</li>
+      <li>Dibujo colaborativo en tiempo real</li>
+      <li>Renderizado de mapas interactivos</li>
+    </ul>
+    <p>
+      <strong>Concepto clave:</strong> Canvas es como un papel en blanco.
+      Necesitas usar la API de Canvas con JavaScript para dibujar formas, texto,
+      imágenes, aplicar transformaciones y crear animaciones. Todo el contenido
+      se dibuja mediante código.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>A continuación se explican en detalle los atributos más importantes:</p>
+
+    <h3>width</h3>
+    <p>
+      Define el ancho del lienzo en píxeles. Si no se especifica, el valor por
+      defecto es 300 píxeles. Es importante establecerlo mediante el atributo
+      HTML, no solo con CSS, para evitar distorsión.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;canvas width="800"&gt;&lt;/canvas&gt;</code>
+    </p>
+
+    <h3>height</h3>
+    <p>
+      Define la altura del lienzo en píxeles. Si no se especifica, el valor por
+      defecto es 150 píxeles. Al igual que width, debe establecerse como
+      atributo HTML para mantener la calidad del dibujo.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;canvas height="600"&gt;&lt;/canvas&gt;</code>
+    </p>
+
+    <p>Otros atributos menos comunes pero útiles:</p>
+    <ul>
+      <li>
+        <strong>id</strong> - Identificador único para referenciar el canvas
+        desde JavaScript (esencial en la práctica)
+      </li>
+      <li>
+        <strong>class</strong> - Clase CSS para aplicar estilos al contenedor
+        del canvas
+      </li>
+    </ul>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;!-- Canvas básico --&gt;
+&lt;canvas id="miCanvas" width="400" height="300"&gt;
+  Tu navegador no soporta el elemento canvas.
+&lt;/canvas&gt;
+
+&lt;script&gt;
+// Obtener el canvas y su contexto 2D
+const canvas = document.getElementById('miCanvas');
+const ctx = canvas.getContext('2d');
+
+// Dibujar un rectángulo rojo
+ctx.fillStyle = 'red';
+ctx.fillRect(50, 50, 100, 80);
+
+// Dibujar un círculo azul
+ctx.beginPath();
+ctx.arc(250, 150, 50, 0, Math.PI * 2);
+ctx.fillStyle = 'blue';
+ctx.fill();
+
+// Dibujar texto
+ctx.font = '20px Arial';
+ctx.fillStyle = 'black';
+ctx.fillText('¡Hola Canvas!', 50, 250);
+&lt;/script&gt;
+
+&lt;!-- Canvas para animación --&gt;
+&lt;canvas id="animacion" width="600" height="400"&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+const canvasAnim = document.getElementById('animacion');
+const ctxAnim = canvasAnim.getContext('2d');
+let x = 0;
+
+function animar() {
+  // Limpiar canvas
+  ctxAnim.clearRect(0, 0, canvasAnim.width, canvasAnim.height);
+  
+  // Dibujar círculo en movimiento
+  ctxAnim.beginPath();
+  ctxAnim.arc(x, 200, 30, 0, Math.PI * 2);
+  ctxAnim.fillStyle = 'green';
+  ctxAnim.fill();
+  
+  // Actualizar posición
+  x += 2;
+  if (x &gt; canvasAnim.width) x = 0;
+  
+  // Siguiente frame
+  requestAnimationFrame(animar);
+}
+
+animar();
+&lt;/script&gt;
+
+&lt;!-- Canvas para firma digital --&gt;
+&lt;canvas id="firma" width="500" height="200" 
+        style="border: 1px solid black;"&gt;
+&lt;/canvas&gt;
+
+&lt;script&gt;
+const canvasFirma = document.getElementById('firma');
+const ctxFirma = canvasFirma.getContext('2d');
+let dibujando = false;
+
+canvasFirma.addEventListener('mousedown', (e) =&gt; {
+  dibujando = true;
+  ctxFirma.beginPath();
+  ctxFirma.moveTo(e.offsetX, e.offsetY);
+});
+
+canvasFirma.addEventListener('mousemove', (e) =&gt; {
+  if (dibujando) {
+    ctxFirma.lineTo(e.offsetX, e.offsetY);
+    ctxFirma.stroke();
+  }
+});
+
+canvasFirma.addEventListener('mouseup', () =&gt; {
+  dibujando = false;
+});
+&lt;/script&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Requiere etiqueta de cierre &lt;/canvas&gt;</li>
+      <li>
+        El contenido entre las etiquetas solo se muestra si el navegador no
+        soporta canvas
+      </li>
+      <li>
+        Establecer width/height mediante atributos HTML, no solo CSS (evita
+        distorsión)
+      </li>
+      <li>
+        Se necesita JavaScript para dibujar; canvas solo proporciona el área de
+        dibujo
+      </li>
+      <li>
+        Usa getContext('2d') para gráficos 2D o getContext('webgl') para 3D
+      </li>
+      <li>
+        Los gráficos no son escalables (son píxeles, no vectoriales como SVG)
+      </li>
+      <li>
+        Ideal para contenido dinámico; para gráficos estáticos considera SVG
+      </li>
+      <li>
+        Accesibilidad limitada; añade contenido alternativo entre las etiquetas
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

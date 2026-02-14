@@ -1,0 +1,206 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta BUTTON</title>
+    <meta name="description" content="Descripción de la etiqueta BUTTON" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta BUTTON" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta BUTTON</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta BUTTON?</h2>
+    <p>
+      La etiqueta <strong>&lt;button&gt;</strong> crea un botón interactivo que
+      puede enviar formularios, ejecutar scripts o simplemente ser clickeable.
+      Es más flexible y semántico que
+      <strong>&lt;input type="button"&gt;</strong>.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;button&gt;</strong> representa un botón
+      clickeable. A diferencia de <strong>&lt;input type="submit"&gt;</strong>,
+      puede contener HTML interno (texto, imágenes, iconos), lo que lo hace
+      mucho más versátil para diseño.
+    </p>
+    <p>Usos comunes de <strong>&lt;button&gt;</strong>:</p>
+    <ul>
+      <li>Envío de formularios</li>
+      <li>Reinicio de formularios</li>
+      <li>Botones de acción (guardar, cancelar, eliminar)</li>
+      <li>Botones con iconos o imágenes</li>
+      <li>Toggles y controles interactivos</li>
+      <li>Botones de navegación</li>
+      <li>Llamadas a acción (Call-to-Action)</li>
+    </ul>
+    <p>
+      <strong>Ventaja sobre &lt;input&gt;:</strong> Puede contener HTML completo
+      (texto + iconos, imágenes, etc.), mientras que
+      <strong>&lt;input type="submit"&gt;</strong> solo puede tener texto plano
+      en su atributo value.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>A continuación se explican en detalle los atributos más importantes:</p>
+
+    <h3>type</h3>
+    <p>
+      Define el tipo de botón. Valores: <strong>submit</strong> (envía el
+      formulario, por defecto), <strong>reset</strong> (reinicia el formulario),
+      <strong>button</strong> (botón genérico sin acción predeterminada,
+      requiere JavaScript). Es importante especificarlo siempre.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code>
+    </p>
+
+    <h3>name</h3>
+    <p>
+      Especifica el nombre del botón. Solo relevante para type="submit", ya que
+      el nombre y valor del botón clickeado se pueden enviar al servidor (útil
+      cuando hay múltiples botones de envío).
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;button type="submit" name="accion"
+        value="guardar"&gt;Guardar&lt;/button&gt;</code
+      >
+    </p>
+
+    <h3>value</h3>
+    <p>
+      Define el valor que se envía al servidor cuando se hace clic en el botón
+      (solo con type="submit"). A diferencia del texto visible, este es el valor
+      interno enviado.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;button type="submit" name="opcion" value="1"&gt;Opción
+        A&lt;/button&gt;</code
+      >
+    </p>
+
+    <h3>disabled</h3>
+    <p>
+      Atributo booleano que deshabilita el botón, impidiendo que se pueda
+      clickear. Se muestra visualmente atenuado. Útil para estados de carga o
+      validación.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;button type="submit" disabled&gt;Procesando...&lt;/button&gt;</code
+      >
+    </p>
+
+    <p>Otros atributos menos comunes pero útiles:</p>
+    <ul>
+      <li>
+        <strong>form</strong> - Asocia el botón con un formulario específico
+        mediante su id (incluso si el botón está fuera del form)
+      </li>
+      <li>
+        <strong>formaction</strong> - Sobrescribe el atributo action del
+        formulario para este botón específico
+      </li>
+      <li>
+        <strong>formmethod</strong> - Sobrescribe el método (GET/POST) del
+        formulario para este botón
+      </li>
+      <li>
+        <strong>formnovalidate</strong> - Deshabilita la validación del
+        formulario solo para este botón
+      </li>
+      <li>
+        <strong>autofocus</strong> - Coloca el foco automáticamente en el botón
+        al cargar la página
+      </li>
+    </ul>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;!-- Botón de envío básico --&gt;
+&lt;button type="submit"&gt;Enviar Formulario&lt;/button&gt;
+
+&lt;!-- Botón de reinicio --&gt;
+&lt;button type="reset"&gt;Limpiar Formulario&lt;/button&gt;
+
+&lt;!-- Botón genérico (requiere JavaScript) --&gt;
+&lt;button type="button" onclick="alert('Hola')"&gt;
+  Hacer clic
+&lt;/button&gt;
+
+&lt;!-- Botón con icono y texto --&gt;
+&lt;button type="submit"&gt;
+  &lt;img src="icono-enviar.svg" alt=""&gt;
+  Enviar Mensaje
+&lt;/button&gt;
+
+&lt;!-- Múltiples botones de envío con diferentes acciones --&gt;
+&lt;button type="submit" name="accion" value="guardar"&gt;
+  Guardar Borrador
+&lt;/button&gt;
+&lt;button type="submit" name="accion" value="publicar"&gt;
+  Publicar Ahora
+&lt;/button&gt;
+
+&lt;!-- Botón deshabilitado --&gt;
+&lt;button type="submit" disabled&gt;
+  Cargando...
+&lt;/button&gt;
+
+&lt;!-- Botón que sobrescribe action del form --&gt;
+&lt;button type="submit" formaction="/guardar-borrador"&gt;
+  Guardar Borrador
+&lt;/button&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Requiere etiqueta de cierre &lt;/button&gt;</li>
+      <li>
+        El type por defecto es "submit", así que especifica type="button" si no
+        quieres enviar el form
+      </li>
+      <li>
+        Puede contener casi cualquier HTML (texto, imágenes, iconos) excepto
+        elementos interactivos
+      </li>
+      <li>
+        Preferir &lt;button&gt; sobre &lt;input type="submit"&gt; por su
+        flexibilidad
+      </li>
+      <li>
+        Siempre especificar el atributo type explícitamente para evitar
+        comportamientos inesperados
+      </li>
+      <li>
+        Dentro de un form, un botón sin type se comporta como type="submit"
+      </li>
+      <li>
+        Mejor accesibilidad que usar &lt;div&gt; o &lt;a&gt; estilizados como
+        botones
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

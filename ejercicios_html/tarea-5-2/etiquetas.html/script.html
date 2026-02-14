@@ -1,0 +1,211 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta SCRIPT</title>
+    <meta name="description" content="Descripción de la etiqueta SCRIPT" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta SCRIPT" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta SCRIPT</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta SCRIPT?</h2>
+    <p>
+      La etiqueta <strong>&lt;script&gt;</strong> se utiliza para insertar
+      código JavaScript en una página HTML o para enlazar archivos JavaScript
+      externos. Es fundamental para añadir interactividad y funcionalidad
+      dinámica a los sitios web.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;script&gt;</strong> permite ejecutar código
+      JavaScript en el navegador. Puede contener código directamente entre sus
+      etiquetas (inline) o referenciar un archivo externo mediante el atributo
+      <strong>src</strong>. JavaScript añade comportamiento dinámico a las
+      páginas estáticas de HTML.
+    </p>
+    <p>Usos comunes de <strong>&lt;script&gt;</strong>:</p>
+    <ul>
+      <li>Manipulación del DOM (modificar contenido, estilos, estructura)</li>
+      <li>Validación de formularios en el cliente</li>
+      <li>Creación de efectos visuales y animaciones</li>
+      <li>Peticiones AJAX para cargar datos sin recargar la página</li>
+      <li>Gestión de eventos del usuario (clics, scroll, teclado)</li>
+      <li>Integración de librerías externas (React, jQuery, etc.)</li>
+      <li>Análisis y seguimiento (Google Analytics, etc.)</li>
+      <li>Aplicaciones web interactivas (SPAs)</li>
+    </ul>
+    <p>
+      <strong>Ubicación recomendada:</strong> Tradicionalmente se colocaba en
+      <strong>&lt;head&gt;</strong>, pero las mejores prácticas modernas
+      recomiendan ponerlo al final del <strong>&lt;body&gt;</strong> o usar
+      atributos <strong>defer</strong>/<strong>async</strong> para optimizar la
+      carga de la página.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>A continuación se explican en detalle los atributos más importantes:</p>
+
+    <h3>src</h3>
+    <p>
+      Especifica la URL del archivo JavaScript externo que se debe cargar.
+      Cuando se usa src, el contenido entre las etiquetas &lt;script&gt; es
+      ignorado. Es la forma más común y recomendada de incluir JavaScript.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;script src="app.js"&gt;&lt;/script&gt;</code>
+    </p>
+
+    <h3>type</h3>
+    <p>
+      Indica el tipo MIME del script. En HTML5, el valor por defecto es
+      "text/javascript" y ya no es necesario especificarlo. También se usa
+      type="module" para módulos ES6.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;script type="module" src="main.js"&gt;&lt;/script&gt;</code>
+    </p>
+
+    <h3>defer</h3>
+    <p>
+      Atributo booleano que indica que el script debe ejecutarse después de que
+      el documento HTML haya sido completamente parseado. Respeta el orden de
+      aparición. Solo funciona con scripts externos (src). Ideal para scripts
+      que necesitan el DOM completo.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;script src="script.js" defer&gt;&lt;/script&gt;</code>
+    </p>
+
+    <h3>async</h3>
+    <p>
+      Atributo booleano que indica que el script se descargará en paralelo y se
+      ejecutará tan pronto como esté disponible, sin esperar al resto del
+      documento. No respeta el orden. Solo funciona con scripts externos. Útil
+      para scripts independientes como analytics.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;script src="analytics.js" async&gt;&lt;/script&gt;</code>
+    </p>
+
+    <p>Otros atributos menos comunes pero útiles:</p>
+    <ul>
+      <li>
+        <strong>integrity</strong> - Hash criptográfico para verificar que el
+        archivo no ha sido alterado (seguridad con CDN)
+      </li>
+      <li>
+        <strong>crossorigin</strong> - Controla las peticiones CORS para scripts
+        de dominios externos
+      </li>
+      <li>
+        <strong>nomodule</strong> - Atributo booleano que hace que navegadores
+        modernos ignoren el script (fallback para navegadores antiguos)
+      </li>
+    </ul>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;!-- Script inline (código directo) --&gt;
+&lt;script&gt;
+  console.log('Hola desde JavaScript');
+  alert('Bienvenido a la página');
+&lt;/script&gt;
+
+&lt;!-- Script externo (forma recomendada) --&gt;
+&lt;script src="js/app.js"&gt;&lt;/script&gt;
+
+&lt;!-- Script externo con defer (ejecución diferida) --&gt;
+&lt;script src="js/main.js" defer&gt;&lt;/script&gt;
+
+&lt;!-- Script externo con async (carga asíncrona) --&gt;
+&lt;script src="https://analytics.example.com/tracker.js" async&gt;&lt;/script&gt;
+
+&lt;!-- Script de módulo ES6 --&gt;
+&lt;script type="module" src="js/module.js"&gt;&lt;/script&gt;
+
+&lt;!-- Script desde CDN con integridad --&gt;
+&lt;script 
+  src="https://cdn.example.com/library.js"
+  integrity="sha384-abc123..."
+  crossorigin="anonymous"&gt;
+&lt;/script&gt;
+
+&lt;!-- Ubicación típica en el documento --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Mi Página&lt;/title&gt;
+    &lt;!-- Scripts críticos con defer --&gt;
+    &lt;script src="critical.js" defer&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Contenido&lt;/h1&gt;
+    
+    &lt;!-- Scripts al final del body (forma tradicional) --&gt;
+    &lt;script src="js/app.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+&lt;!-- Ejemplo de manipulación del DOM --&gt;
+&lt;button id="miBoton"&gt;Haz clic&lt;/button&gt;
+
+&lt;script&gt;
+  document.getElementById('miBoton').addEventListener('click', function() {
+    alert('¡Botón clickeado!');
+  });
+&lt;/script&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>
+        Requiere etiqueta de cierre &lt;/script&gt; (nunca usar forma
+        autocerrante)
+      </li>
+      <li>
+        Los scripts bloquean el renderizado del HTML mientras se ejecutan (usar
+        defer/async para evitarlo)
+      </li>
+      <li>
+        defer: espera al DOM, mantiene orden - async: ejecuta cuando esté listo,
+        sin orden
+      </li>
+      <li>
+        Preferir scripts externos sobre código inline para mejor mantenimiento y
+        caché
+      </li>
+      <li>
+        Colocar scripts al final del &lt;body&gt; o usar defer para scripts que
+        necesitan el DOM
+      </li>
+      <li>El atributo type="text/javascript" ya no es necesario en HTML5</li>
+      <li>Los scripts inline no aceptan atributos src, defer o async</li>
+      <li>
+        Para seguridad, evitar inline scripts y usar CSP (Content Security
+        Policy)
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

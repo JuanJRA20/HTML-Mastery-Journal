@@ -1,0 +1,227 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta SELECT</title>
+    <meta name="description" content="Descripción de la etiqueta SELECT" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta SELECT" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta SELECT</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta SELECT?</h2>
+    <p>
+      La etiqueta <strong>&lt;select&gt;</strong> crea una lista desplegable
+      (dropdown) que permite a los usuarios elegir una o varias opciones de un
+      conjunto predefinido.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;select&gt;</strong> es un control de formulario
+      que presenta opciones al usuario en un menú desplegable. Funciona en
+      conjunto con las etiquetas <strong>&lt;option&gt;</strong> (que definen
+      cada opción) y opcionalmente <strong>&lt;optgroup&gt;</strong> (para
+      agrupar opciones).
+    </p>
+    <p>Usos comunes de <strong>&lt;select&gt;</strong>:</p>
+    <ul>
+      <li>Selección de países o ciudades</li>
+      <li>Categorías de productos</li>
+      <li>Opciones de configuración</li>
+      <li>Rangos de fechas o cantidades</li>
+      <li>Filtros de búsqueda</li>
+      <li>Selección de idioma</li>
+      <li>Menús de navegación en dispositivos móviles</li>
+    </ul>
+    <p>
+      <strong>Ventaja principal:</strong> Ahorra espacio en la interfaz cuando
+      hay muchas opciones, mostrándolas solo cuando el usuario abre el
+      desplegable.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>A continuación se explican en detalle los atributos más importantes:</p>
+
+    <h3>name</h3>
+    <p>
+      Especifica el nombre del campo que se enviará al servidor. Es esencial
+      para identificar qué opción seleccionó el usuario cuando se procesa el
+      formulario.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;select name="pais"&gt;&lt;/select&gt;</code>
+    </p>
+
+    <h3>multiple</h3>
+    <p>
+      Atributo booleano que permite al usuario seleccionar múltiples opciones
+      manteniendo presionada la tecla Ctrl (o Cmd en Mac). Cambia la apariencia
+      a una lista en lugar de desplegable.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;select name="intereses" multiple&gt;&lt;/select&gt;</code>
+    </p>
+
+    <h3>size</h3>
+    <p>
+      Define cuántas opciones son visibles simultáneamente. Si no se especifica,
+      se muestra como desplegable (dropdown). Con size mayor a 1, se muestra
+      como lista scrollable.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;select name="opciones" size="5"&gt;&lt;/select&gt;</code>
+    </p>
+
+    <h3>required</h3>
+    <p>
+      Atributo booleano que hace obligatoria la selección de una opción. El
+      formulario no se puede enviar sin seleccionar algo. Útil para campos
+      obligatorios como país o categoría.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;select name="categoria" required&gt;&lt;/select&gt;</code>
+    </p>
+
+    <p>Otros atributos menos comunes pero útiles:</p>
+    <ul>
+      <li>
+        <strong>disabled</strong> - Atributo booleano que deshabilita todo el
+        select, impidiendo la selección
+      </li>
+      <li>
+        <strong>autofocus</strong> - Atributo booleano que coloca el foco
+        automáticamente en este campo al cargar la página
+      </li>
+      <li>
+        <strong>form</strong> - Asocia el select con un formulario específico
+        mediante su id
+      </li>
+    </ul>
+
+    <h2>Atributos de la etiqueta OPTION</h2>
+    <p>
+      Las opciones dentro de <strong>&lt;select&gt;</strong> se crean con
+      <strong>&lt;option&gt;</strong> y tienen sus propios atributos
+      importantes:
+    </p>
+
+    <h3>value</h3>
+    <p>
+      Define el valor que se envía al servidor cuando se selecciona esta opción.
+      Si no se especifica, se envía el texto visible de la opción.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;option value="es"&gt;España&lt;/option&gt;</code>
+    </p>
+
+    <h3>selected</h3>
+    <p>
+      Atributo booleano que marca esta opción como seleccionada por defecto
+      cuando se carga la página.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;option value="mx" selected&gt;México&lt;/option&gt;</code>
+    </p>
+
+    <h3>disabled</h3>
+    <p>
+      Atributo booleano que deshabilita una opción específica, impidiendo su
+      selección. Se muestra atenuada visualmente.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;option value="sold-out" disabled&gt;Agotado&lt;/option&gt;</code
+      >
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;!-- Select básico --&gt;
+&lt;label for="pais"&gt;País:&lt;/label&gt;
+&lt;select id="pais" name="pais" required&gt;
+  &lt;option value=""&gt;-- Selecciona un país --&lt;/option&gt;
+  &lt;option value="es"&gt;España&lt;/option&gt;
+  &lt;option value="mx"&gt;México&lt;/option&gt;
+  &lt;option value="ar"&gt;Argentina&lt;/option&gt;
+  &lt;option value="co"&gt;Colombia&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- Select con opción preseleccionada --&gt;
+&lt;select name="idioma"&gt;
+  &lt;option value="es" selected&gt;Español&lt;/option&gt;
+  &lt;option value="en"&gt;English&lt;/option&gt;
+  &lt;option value="fr"&gt;Français&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- Select con grupos --&gt;
+&lt;select name="ciudad"&gt;
+  &lt;optgroup label="España"&gt;
+    &lt;option value="madrid"&gt;Madrid&lt;/option&gt;
+    &lt;option value="barcelona"&gt;Barcelona&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label="México"&gt;
+    &lt;option value="cdmx"&gt;Ciudad de México&lt;/option&gt;
+    &lt;option value="guadalajara"&gt;Guadalajara&lt;/option&gt;
+  &lt;/optgroup&gt;
+&lt;/select&gt;
+
+&lt;!-- Select múltiple --&gt;
+&lt;select name="intereses" multiple size="5"&gt;
+  &lt;option value="deportes"&gt;Deportes&lt;/option&gt;
+  &lt;option value="musica"&gt;Música&lt;/option&gt;
+  &lt;option value="cine"&gt;Cine&lt;/option&gt;
+  &lt;option value="lectura"&gt;Lectura&lt;/option&gt;
+  &lt;option value="viajes"&gt;Viajes&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Requiere etiqueta de cierre &lt;/select&gt;</li>
+      <li>
+        Solo puede contener &lt;option&gt; y &lt;optgroup&gt; como hijos
+        directos
+      </li>
+      <li>
+        La primera &lt;option&gt; suele ser un placeholder ("-- Selecciona --")
+        con value vacío
+      </li>
+      <li>Siempre asociar con &lt;label&gt; para accesibilidad</li>
+      <li>
+        Usar &lt;optgroup&gt; para organizar muchas opciones en categorías
+      </li>
+      <li>
+        Con multiple, el usuario puede seleccionar varias opciones con Ctrl/Cmd
+        + clic
+      </li>
+      <li>
+        El valor enviado al servidor proviene del atributo value de
+        &lt;option&gt;
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

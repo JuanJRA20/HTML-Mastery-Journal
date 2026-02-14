@@ -1,0 +1,253 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta INPUT</title>
+    <meta name="description" content="Descripción de la etiqueta INPUT" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta INPUT" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta INPUT</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta INPUT?</h2>
+    <p>
+      La etiqueta <strong>&lt;input&gt;</strong> crea campos de entrada
+      interactivos donde los usuarios pueden ingresar datos. Es uno de los
+      elementos más versátiles de HTML gracias a sus múltiples tipos.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;input&gt;</strong> es un elemento vacío (sin
+      etiqueta de cierre) que representa un campo de entrada de datos. Su
+      comportamiento y apariencia varían drásticamente según el valor del
+      atributo <strong>type</strong>.
+    </p>
+    <p>Tipos comunes de <strong>&lt;input&gt;</strong>:</p>
+    <ul>
+      <li><strong>text</strong> - Campo de texto simple (por defecto)</li>
+      <li>
+        <strong>password</strong> - Campo de contraseña (oculta los caracteres)
+      </li>
+      <li>
+        <strong>email</strong> - Campo de correo electrónico (con validación)
+      </li>
+      <li><strong>number</strong> - Campo numérico</li>
+      <li><strong>checkbox</strong> - Casilla de verificación</li>
+      <li>
+        <strong>radio</strong> - Botón de opción (selección única en grupo)
+      </li>
+      <li><strong>file</strong> - Selector de archivos</li>
+      <li><strong>submit</strong> - Botón de envío de formulario</li>
+      <li>
+        <strong>date</strong>, <strong>time</strong>, <strong>color</strong>, y
+        muchos más
+      </li>
+    </ul>
+    <p>
+      <strong>Versatilidad:</strong> HTML5 añadió más de 10 nuevos tipos de
+      input, haciendo esta etiqueta extremadamente flexible para diferentes
+      necesidades.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>A continuación se explican en detalle los atributos más importantes:</p>
+
+    <h3>type</h3>
+    <p>
+      Define el tipo de control de entrada. Es el atributo más importante ya que
+      determina completamente el comportamiento del input. Si se omite, el valor
+      por defecto es "text".
+    </p>
+    <p><strong>Ejemplo:</strong> <code>&lt;input type="email"&gt;</code></p>
+
+    <h3>name</h3>
+    <p>
+      Especifica el nombre del campo que se enviará al servidor. Es esencial
+      para procesar formularios, ya que identifica el valor en el backend. Sin
+      name, el campo no se envía.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;input type="text" name="nombre_usuario"&gt;</code>
+    </p>
+
+    <h3>value</h3>
+    <p>
+      Define el valor inicial del campo. Para type="text" es el texto
+      predeterminado, para type="checkbox" es el valor que se envía si está
+      marcado, para type="submit" es el texto del botón.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;input type="text" name="ciudad" value="Madrid"&gt;</code>
+    </p>
+
+    <h3>placeholder</h3>
+    <p>
+      Muestra un texto de ayuda dentro del campo que desaparece cuando el
+      usuario empieza a escribir. Solo funciona con campos de texto. No
+      sustituye a una etiqueta <strong>&lt;label&gt;</strong>.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;input type="email" placeholder="tu@email.com"&gt;</code>
+    </p>
+
+    <h3>required</h3>
+    <p>
+      Atributo booleano que hace obligatorio el campo. El formulario no se puede
+      enviar sin completarlo. Activa la validación HTML5 nativa del navegador.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;input type="text" name="nombre" required&gt;</code>
+    </p>
+
+    <h3>disabled</h3>
+    <p>
+      Atributo booleano que deshabilita el campo, impidiendo que el usuario
+      interactúe con él. Los campos deshabilitados no se envían con el
+      formulario y aparecen visualmente atenuados.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;input type="text" name="campo" disabled&gt;</code>
+    </p>
+
+    <h3>readonly</h3>
+    <p>
+      Atributo booleano que hace el campo de solo lectura. El usuario puede ver
+      pero no modificar el valor. A diferencia de disabled, los campos readonly
+      SÍ se envían con el formulario.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;input type="text" name="id" value="12345" readonly&gt;</code>
+    </p>
+
+    <h3>maxlength</h3>
+    <p>
+      Especifica el número máximo de caracteres permitidos en el campo. Solo
+      funciona con campos de texto. El navegador impide escribir más allá de
+      este límite.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;input type="text" name="codigo" maxlength="10"&gt;</code>
+    </p>
+
+    <h3>min y max</h3>
+    <p>
+      Definen el valor mínimo y máximo permitido para campos numéricos (number,
+      date, time, range). Útiles para validación y controlar rangos de valores.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;input type="number" name="edad" min="18" max="99"&gt;</code>
+    </p>
+
+    <h3>pattern</h3>
+    <p>
+      Define una expresión regular que el valor del campo debe cumplir para ser
+      válido. Potente herramienta de validación personalizada con HTML5.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;input type="text" name="codigo_postal" pattern="[0-9]{5}"&gt;</code
+      >
+    </p>
+
+    <p>Otros atributos menos comunes pero útiles:</p>
+    <ul>
+      <li>
+        <strong>autocomplete</strong> - Habilita (on) o deshabilita (off) el
+        autocompletado del campo
+      </li>
+      <li>
+        <strong>autofocus</strong> - Atributo booleano que coloca el foco
+        automáticamente en este campo al cargar la página
+      </li>
+      <li>
+        <strong>multiple</strong> - Permite seleccionar múltiples valores (para
+        type="file" o type="email")
+      </li>
+      <li>
+        <strong>step</strong> - Define el incremento para campos numéricos (ej:
+        step="0.01" para decimales)
+      </li>
+      <li>
+        <strong>checked</strong> - Atributo booleano que marca por defecto un
+        checkbox o radio button
+      </li>
+      <li>
+        <strong>accept</strong> - Especifica tipos de archivo permitidos (solo
+        para type="file")
+      </li>
+      <li>
+        <strong>size</strong> - Define el ancho visible del campo en caracteres
+      </li>
+    </ul>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;!-- Campos de texto básicos --&gt;
+&lt;input type="text" name="nombre" placeholder="Tu nombre" required&gt;
+&lt;input type="email" name="email" placeholder="tu@email.com" required&gt;
+&lt;input type="password" name="contraseña" minlength="8" required&gt;
+
+&lt;!-- Campo numérico con rango --&gt;
+&lt;input type="number" name="edad" min="18" max="120"&gt;
+
+&lt;!-- Checkboxes --&gt;
+&lt;input type="checkbox" name="newsletter" value="si" checked&gt;
+&lt;input type="checkbox" name="terminos" required&gt;
+
+&lt;!-- Radio buttons (mismo name para grupo) --&gt;
+&lt;input type="radio" name="genero" value="masculino"&gt;
+&lt;input type="radio" name="genero" value="femenino"&gt;
+&lt;input type="radio" name="genero" value="otro"&gt;
+
+&lt;!-- Selector de archivos --&gt;
+&lt;input type="file" name="documento" accept=".pdf,.doc,.docx"&gt;
+
+&lt;!-- Campo de fecha --&gt;
+&lt;input type="date" name="fecha_nacimiento" min="1900-01-01" max="2024-12-31"&gt;
+
+&lt;!-- Botón de envío --&gt;
+&lt;input type="submit" value="Enviar Formulario"&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Es una etiqueta vacía (no tiene &lt;/input&gt; de cierre)</li>
+      <li>
+        El atributo type determina completamente el comportamiento del input
+      </li>
+      <li>Siempre asociar con &lt;label&gt; para accesibilidad</li>
+      <li>El atributo name es esencial para enviar datos al servidor</li>
+      <li>Los radio buttons del mismo grupo deben tener el mismo name</li>
+      <li>
+        HTML5 añadió validación nativa (required, pattern, type="email", etc.)
+      </li>
+      <li>Para type="file" con múltiples archivos, usa multiple</li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

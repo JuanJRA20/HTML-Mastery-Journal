@@ -1,0 +1,179 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta FORM</title>
+    <meta name="description" content="Descripción de la etiqueta FORM" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta FORM" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta FORM</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta FORM?</h2>
+    <p>
+      La etiqueta <strong>&lt;form&gt;</strong> crea un formulario interactivo
+      que permite a los usuarios enviar datos al servidor. Es fundamental para
+      la interacción usuario-servidor en la web.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;form&gt;</strong> es un elemento de bloque que
+      agrupa controles interactivos como campos de texto, botones, checkboxes,
+      etc., y define cómo se enviarán esos datos al servidor.
+    </p>
+    <p>Usos comunes de <strong>&lt;form&gt;</strong>:</p>
+    <ul>
+      <li>Formularios de contacto</li>
+      <li>Formularios de registro e inicio de sesión</li>
+      <li>Formularios de búsqueda</li>
+      <li>Formularios de pago y checkout</li>
+      <li>Encuestas y cuestionarios</li>
+      <li>Formularios de comentarios</li>
+      <li>Subida de archivos</li>
+    </ul>
+    <p>
+      <strong>Concepto clave:</strong> Un formulario por sí solo no hace nada;
+      necesita controles de entrada (<strong>&lt;input&gt;</strong>,
+      <strong>&lt;textarea&gt;</strong>, <strong>&lt;select&gt;</strong>, etc.)
+      y un mecanismo de procesamiento en el servidor o con JavaScript.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>A continuación se explican en detalle los atributos más importantes:</p>
+
+    <h3>action</h3>
+    <p>
+      Especifica la URL donde se enviarán los datos del formulario cuando se
+      envíe. Si se omite, los datos se envían a la misma página actual. Es uno
+      de los atributos más importantes.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;form action="/procesar-formulario.php"&gt;</code>
+    </p>
+
+    <h3>method</h3>
+    <p>
+      Define el método HTTP usado para enviar los datos. Valores:
+      <strong>GET</strong> (datos visibles en la URL, por defecto),
+      <strong>POST</strong> (datos en el cuerpo de la petición, más seguro). Usa
+      POST para datos sensibles o grandes cantidades de información.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;form action="/login" method="POST"&gt;</code>
+    </p>
+
+    <h3>enctype</h3>
+    <p>
+      Especifica cómo se codificarán los datos antes de enviarlos al servidor.
+      Solo relevante con method="POST". Valores:
+      <strong>application/x-www-form-urlencoded</strong> (por defecto),
+      <strong>multipart/form-data</strong> (requerido para subir archivos),
+      <strong>text/plain</strong> (raramente usado).
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code
+        >&lt;form action="/upload" method="POST"
+        enctype="multipart/form-data"&gt;</code
+      >
+    </p>
+
+    <h3>name</h3>
+    <p>
+      Asigna un nombre al formulario, útil para referenciarlo desde JavaScript o
+      cuando hay múltiples formularios en una página. Permite acceder al
+      formulario mediante <code>document.forms.nombreFormulario</code>.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;form name="contacto" action="/enviar"&gt;</code>
+    </p>
+
+    <p>Otros atributos menos comunes pero útiles:</p>
+    <ul>
+      <li>
+        <strong>target</strong> - Define dónde mostrar la respuesta (_self,
+        _blank, _parent, _top). Similar al atributo target de los enlaces
+      </li>
+      <li>
+        <strong>autocomplete</strong> - Habilita (on) o deshabilita (off) el
+        autocompletado de campos. Los navegadores recordarán valores previos
+      </li>
+      <li>
+        <strong>novalidate</strong> - Atributo booleano que desactiva la
+        validación HTML5 nativa del formulario. Útil si usas validación
+        personalizada con JavaScript
+      </li>
+    </ul>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;!-- Formulario básico de contacto --&gt;
+&lt;form action="/enviar-contacto" method="POST"&gt;
+  &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+  &lt;input type="text" id="nombre" name="nombre" required&gt;
+  
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;
+  
+  &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+  &lt;textarea id="mensaje" name="mensaje"&gt;&lt;/textarea&gt;
+  
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;!-- Formulario de subida de archivos --&gt;
+&lt;form action="/upload" method="POST" enctype="multipart/form-data"&gt;
+  &lt;label for="archivo"&gt;Selecciona un archivo:&lt;/label&gt;
+  &lt;input type="file" id="archivo" name="archivo"&gt;
+  &lt;button type="submit"&gt;Subir&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;!-- Formulario de búsqueda --&gt;
+&lt;form action="/buscar" method="GET"&gt;
+  &lt;input type="search" name="q" placeholder="Buscar..."&gt;
+  &lt;button type="submit"&gt;Buscar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Requiere etiqueta de cierre &lt;/form&gt;</li>
+      <li>
+        Usa method="POST" para datos sensibles (contraseñas, información
+        personal)
+      </li>
+      <li>
+        Usa method="GET" solo para búsquedas o filtros (datos visibles en URL)
+      </li>
+      <li>Para subir archivos, SIEMPRE usa enctype="multipart/form-data"</li>
+      <li>Todos los controles con name se envían al servidor</li>
+      <li>
+        El botón &lt;button type="submit"&gt; o &lt;input type="submit"&gt;
+        envía el formulario
+      </li>
+      <li>
+        HTML5 incluye validación nativa (required, pattern, type="email", etc.)
+      </li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

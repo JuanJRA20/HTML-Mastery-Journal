@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta DIV</title>
+    <meta name="description" content="Descripción de la etiqueta DIV" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta DIV" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta DIV</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta DIV?</h2>
+    <p>
+      La etiqueta <strong>&lt;div&gt;</strong> (division) es un contenedor
+      genérico de bloque sin significado semántico. Se utiliza para agrupar
+      elementos y aplicar estilos o scripts.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;div&gt;</strong> es uno de los elementos más
+      utilizados en HTML. Es un contenedor de propósito general que no tiene
+      significado semántico por sí mismo. Se usa principalmente como estructura
+      para diseño y aplicación de estilos CSS.
+    </p>
+    <p>Usos comunes de <strong>&lt;div&gt;</strong>:</p>
+    <ul>
+      <li>Agrupar elementos para aplicar estilos CSS</li>
+      <li>Crear estructuras de layout (columnas, grids, contenedores)</li>
+      <li>Envolver secciones para manipulación con JavaScript</li>
+      <li>Organizar contenido visualmente sin implicación semántica</li>
+      <li>Crear componentes de diseño reutilizables</li>
+    </ul>
+    <p>
+      <strong>Importante en HTML5:</strong> Antes de usar
+      <strong>&lt;div&gt;</strong>, considera si existe una etiqueta semántica
+      más apropiada como <strong>&lt;header&gt;</strong>,
+      <strong>&lt;nav&gt;</strong>, <strong>&lt;section&gt;</strong>,
+      <strong>&lt;article&gt;</strong>, <strong>&lt;aside&gt;</strong> o
+      <strong>&lt;footer&gt;</strong>. Usa <strong>&lt;div&gt;</strong> solo
+      cuando no haya alternativa semántica.
+    </p>
+
+    <h2>Atributos principales</h2>
+    <p>
+      La etiqueta <strong>&lt;div&gt;</strong> no tiene atributos específicos
+      propios. Acepta todos los atributos globales de HTML5, siendo los más
+      utilizados:
+    </p>
+    <ul>
+      <li><strong>id</strong> - Identificador único del elemento</li>
+      <li>
+        <strong>class</strong> - Clase CSS para aplicar estilos (el más común)
+      </li>
+      <li><strong>style</strong> - Estilos CSS inline</li>
+    </ul>
+    <p>
+      De hecho, <strong>&lt;div&gt;</strong> casi siempre se usa con
+      <strong>class</strong> o <strong>id</strong> para poder aplicar estilos o
+      scripts específicos.
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;div class="contenedor"&gt;
+  &lt;div class="encabezado"&gt;
+    &lt;h1&gt;Título Principal&lt;/h1&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="contenido"&gt;
+    &lt;p&gt;Contenido de la página...&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="sidebar"&gt;
+    &lt;p&gt;Información adicional&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Mejor alternativa semántica --&gt;
+&lt;div class="contenedor"&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Título Principal&lt;/h1&gt;
+  &lt;/header&gt;
+  
+  &lt;main&gt;
+    &lt;p&gt;Contenido de la página...&lt;/p&gt;
+  &lt;/main&gt;
+  
+  &lt;aside&gt;
+    &lt;p&gt;Información adicional&lt;/p&gt;
+  &lt;/aside&gt;
+&lt;/div&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Es un elemento de bloque (ocupa todo el ancho disponible)</li>
+      <li>No tiene significado semántico, es neutral</li>
+      <li>Preferir etiquetas semánticas de HTML5 cuando sea posible</li>
+      <li>Muy usado con CSS Grid y Flexbox para layouts</li>
+      <li>Por defecto no aplica ningún estilo visual</li>
+      <li>Puede contener cualquier tipo de contenido (bloque o en línea)</li>
+      <li>El equivalente en línea es &lt;span&gt;</li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>

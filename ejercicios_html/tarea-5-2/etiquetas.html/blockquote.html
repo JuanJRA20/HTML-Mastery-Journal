@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>La Etiqueta BLOCKQUOTE</title>
+    <meta name="description" content="Descripción de la etiqueta BLOCKQUOTE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="La Etiqueta BLOCKQUOTE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>La Etiqueta BLOCKQUOTE</h1>
+    <p><a href="../Inicio.html">Volver al inicio</a></p>
+    <h2>¿Qué es la etiqueta BLOCKQUOTE?</h2>
+    <p>
+      La etiqueta <strong>&lt;blockquote&gt;</strong> representa una cita
+      extensa proveniente de otra fuente. Se utiliza para citar bloques de texto
+      de otros autores o documentos.
+    </p>
+    <h2>Descripcion</h2>
+    <p>
+      La etiqueta <strong>&lt;blockquote&gt;</strong> es un elemento de bloque
+      semántico que indica que el contenido es una cita textual de una fuente
+      externa. Los navegadores típicamente aplican sangría (indentación) al
+      contenido para distinguirlo visualmente del resto del texto.
+    </p>
+    <p>Características de <strong>&lt;blockquote&gt;</strong>:</p>
+    <ul>
+      <li>Para citas largas que ocupan uno o más párrafos</li>
+      <li>
+        Puede contener múltiples elementos dentro (párrafos, listas, etc.)
+      </li>
+      <li>Se muestra como elemento de bloque (con márgenes y sangría)</li>
+      <li>
+        Debe usarse solo para contenido realmente citado, no para sangría
+        decorativa
+      </li>
+    </ul>
+    <p>
+      <strong>Nota:</strong> Para citas cortas dentro de un párrafo, usa
+      <strong>&lt;q&gt;</strong> en lugar de
+      <strong>&lt;blockquote&gt;</strong>.
+    </p>
+
+    <h2>Atributos principales</h2>
+
+    <h3>cite</h3>
+    <p>
+      Especifica la URL de la fuente de donde proviene la cita. Este atributo no
+      es visible para el usuario, pero es útil para referencias y accesibilidad.
+    </p>
+    <p>
+      <strong>Ejemplo:</strong>
+      <code>&lt;blockquote cite="https://ejemplo.com/articulo"&gt;</code>
+    </p>
+
+    <h2>Ejemplo práctico</h2>
+    <pre><code>&lt;blockquote cite="https://www.w3.org/standards/"&gt;
+  &lt;p&gt;
+    La Web está diseñada para funcionar para todas las 
+    personas, sea cual sea su hardware, software, idioma, 
+    ubicación o capacidad.
+  &lt;/p&gt;
+  &lt;footer&gt;— W3C, &lt;cite&gt;Web Standards&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+
+    <h2>Notas importantes</h2>
+    <ul>
+      <li>Es un elemento de bloque (genera salto de línea)</li>
+      <li>Los navegadores aplican sangría por defecto</li>
+      <li>El atributo cite debe contener una URL válida</li>
+      <li>Puede contener un &lt;footer&gt; con información de la fuente</li>
+      <li>
+        Usar junto con &lt;cite&gt; para referenciar el título de la obra citada
+      </li>
+      <li>No usar solo para crear sangría visual (usa CSS en su lugar)</li>
+    </ul>
+
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="01_clases/Clase 04 - Estructura de una página web/code/html5-boilerplate-main/js/app.js"></script>
+  </body>
+</html>
