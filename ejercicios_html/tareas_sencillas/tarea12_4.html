@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 12.4</title>
+    <meta name="description" content="Descripción del ejercicio 12.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-colo" content="#fafafa" />
+  </head>
+  <body>
+    <header>
+      <h1>Informacion sobre el producto</h1>
+    </header>
+    <main>
+      <form action="" method="get">
+        <fieldset>
+          <legend>Datos básicos</legend>
+          <p>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" maxlength="50" />
+          </p>
+          <p>
+            <label for="description">Descripción:</label>
+            <br />
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              cols="50"
+            ></textarea>
+          </p>
+          <p>
+            <label for="photo">Foto:</label>
+            <input
+              type="url"
+              id="photo_url"
+              name="photo_url"
+              placeholder="URL de la foto"
+            />
+            <input
+              type="file"
+              id="photo"
+              name="photo"
+              accept="image/*"
+              required
+            />
+          </p>
+          <p>
+            <input type="checkbox" id="contador" name="contador" />
+            <label for="contador">Añadir contador de visitas</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Datos económicos</legend>
+          <p>
+            <label for="price">Precio:</label>
+            <input type="number" id="price" name="price" required />
+            €
+
+            <label for="taxes">Impuestos:</label>
+            <select id="taxes" name="taxes" required>
+              <option value="0">0%</option>
+              <option value="5">5%</option>
+              <option value="10">10%</option>
+              <option value="15">15%</option>
+              <option value="20">20%</option>
+            </select>
+          </p>
+          <p>
+            <label for="promotion">Promoción:</label>
+            <br />
+
+            <input
+              type="radio"
+              id="promotion"
+              name="promotion"
+              value="no"
+              required
+            />
+            <label for="promotion">Ninguno</label>
+            <br />
+            <input
+              type="radio"
+              id="promotion_no"
+              name="promotion"
+              value="free_shipping"
+              required
+            />
+            <label for="promotion_no">Transporte gratuito</label>
+            <br />
+            <input
+              type="radio"
+              id="promotion_yes"
+              name="promotion"
+              value="discount"
+              required
+            />
+            <label for="promotion_yes">Descuento 5%</label>
+          </p>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <p>Copyright © 2024 Mi web. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
