@@ -6,29 +6,29 @@
     <title>Conquer Blocks</title>
     <meta
       name="description"
-      content="Descripción de la página de Conquer Blocks"
+      content="Pagina principal de Conquer Blocks, plataforma de formación online con cursos de alta calidad en diversas áreas."
     />
   </head>
 
   <body>
     <header>
-      <a href="index.html">
-        <img
-          type="image"
-          src="../assets/Header/logo_conquer.png"
-          alt="Logo de la empresa"
-          width="100"
-        />
-      </a>
       <nav>
-        <a href="../home/index.html">Home</a>
+        <a href="index.html">
+          <img
+            type="image"
+            src="../assets/Header/logo_conquer.png"
+            alt="Logo de la empresa"
+            width="100"
+          />
+        </a>
+        <p>Home</p>
         <a href="../about_us/about_us.html">Quienes somos</a>
-        <a id="courses-link" href="../courses/courses.html">Cursos</a>
-        <a href="../blog_prensa/blog_prensa.html">Blog y Prensa</a>
-        <a href="../registro/registro.html">Registro</a>
-        <a href="../login/inicio_sesion.html">Login</a>
+        <a href="../courses/courses.html">Cursos</a>
+        <a href="../blog_prensa/blog.html">Blog</a>
         <a href="../contacto/contacto.html">Contacto</a>
         <a href="../legal/legal.html">Legal</a>
+        <button><a href="../registro/registro.html">Registro</a></button>
+        <button><a href="../login/inicio_sesion.html">Login</a></button>
       </nav>
     </header>
     <main>
@@ -48,10 +48,10 @@
           </picture>
 
           <p>
-            Conquer Blocks es una plataforma de formación online que ofrece
-            cursos de alta calidad en diversas áreas. Nuestro objetivo es
-            ayudarte a conquistar tus metas y alcanzar el éxito en tu carrera
-            profesional.
+            <strong>Conquer Blocks</strong> es una plataforma de formación
+            online que ofrece cursos de alta calidad en diversas áreas. Nuestro
+            objetivo es ayudarte a conquistar tus metas y alcanzar el éxito en
+            tu carrera profesional.
           </p>
         </article>
       </section>
@@ -85,9 +85,9 @@
         <article>
           <h3>Master en Inteligencia Artificial</h3>
           <picture>
-            <source srcset="../assets/Home/Full-stack.png" />
+            <source srcset="../assets/Cursos/Inteligencia_artificial.png" />
             <img
-              src="../assets/Home/Full-stack.png"
+              src="../assets/Cursos/Inteligencia_artificial.png"
               alt="Imagen de Master en Inteligencia Artificial"
               width="600"
             />
@@ -96,7 +96,11 @@
             Enfocado en el aprendizaje automático, el procesamiento del lenguaje
             natural y la visión por computadora.
           </p>
-          <button onclick="window.location.href = '../courses/course_1.html'">
+          <button
+            onclick="
+              window.location.href = '../courses/Inteligencia_artificial.html'
+            "
+          >
             Ver curso
           </button>
         </article>
@@ -104,9 +108,9 @@
         <article>
           <h3>Master en Cyberseguridad</h3>
           <picture>
-            <source srcset="../assets/Home/cyber_seguridad.png" />
+            <source srcset="../assets/Cursos/ciber_seguridad.png" />
             <img
-              src="../assets/Home/cyber_seguridad.png"
+              src="../assets/Cursos/ciber_seguridad.png"
               alt="Imagen de Master en Cyberseguridad"
               width="600"
             />
@@ -116,7 +120,9 @@
             amenazas cibernéticas. Impartido por el gran profesional Chema
             Alonso.
           </p>
-          <button onclick="window.location.href = '../courses/course_2.html'">
+          <button
+            onclick="window.location.href = '../courses/ciber_seguridad.html'"
+          >
             Ver curso
           </button>
         </article>
@@ -129,21 +135,21 @@
       <section>
         <h2>Nuestro Blog</h2>
         <article>
-          <a href="../blog_prensa/blog.html">
+          <a href="../blog_prensa/Diagrama.html">
             <picture>
               <source
                 media="(max-width: 600px)"
                 srcset="../assets/Home/Diagrama_flujo.webp"
               />
               <img
-                src="../assets/Home/Diagrama_flujo.png"
+                src="../assets/Blog/Diagrama_flujo.png"
                 alt="Imagen de Blog y Prensa"
                 width="600"
               />
             </picture>
           </a>
           <h3>
-            <a href="../blog_prensa/blog.html"
+            <a href="../blog_prensa/Diagrama.html"
               >¿Qué es un diagrama de flujo y por qué es tan útil?</a
             >
           </h3>
@@ -154,25 +160,25 @@
             procesos complejos, identificar cuellos de botella y mejorar la
             eficiencia. Para leer más sobre este tema, visita nuestro blog o haz
             click en
-            <a href="../blog_prensa/blog.html">Blog</a>.
+            <a href="../blog_prensa/Diagrama.html">Blog</a>.
           </p>
         </article>
         <article>
-          <a href="../blog_prensa/blog.html">
+          <a href="../blog_prensa/Algoritmo.html">
             <picture>
               <source
                 media="(max-width: 600px)"
                 srcset="../assets/Home/Algoritmos.webp"
               />
               <img
-                src="../assets/Home/Algoritmos.png"
+                src="../assets/Blog/Algoritmos.png"
                 alt="Imagen de Blog y Prensa"
                 width="600"
               />
             </picture>
           </a>
           <h3>
-            <a href="../blog_prensa/blog.html"
+            <a href="../blog_prensa/Algoritmo.html"
               >¿Qué es un algoritmo y por qué es tan importante?</a
             >
           </h3>
@@ -182,25 +188,25 @@
             visualizar y entender procesos complejos, identificar cuellos de
             botella y mejorar la eficiencia. Para leer más sobre este tema,
             visita nuestro blog o haz click en
-            <a href="../blog_prensa/blog.html">Blog</a>.
+            <a href="../blog_prensa/Algoritmo.html">Blog</a>.
           </p>
         </article>
         <article>
-          <a href="../blog_prensa/blog.html">
+          <a href="../blog_prensa/Lenguaje_natural.html">
             <picture>
               <source
                 media="(max-width: 600px)"
                 srcset="../assets/Home/Lenguaje_natural.webp"
               />
               <img
-                src="../assets/Home/Lenguaje_natural.png"
+                src="../assets/Blog/Lenguaje_natural.png"
                 alt="Imagen de Blog y Prensa"
                 width="600"
               />
             </picture>
           </a>
           <h3>
-            <a href="../blog_prensa/blog.html"
+            <a href="../blog_prensa/Lenguaje_natural.html"
               >Lenguaje natural y programación: ¿cómo lo entienden las
               máquinas?</a
             >
@@ -211,12 +217,10 @@
             para comunicarse, las máquinas entienden instrucciones precisas y
             estructuradas. Para leer más sobre este tema, visita nuestro blog o
             haz click en
-            <a href="../blog_prensa/blog.html">Blog</a>.
+            <a href="../blog_prensa/Lenguaje_natural.html">Blog</a>.
           </p>
         </article>
-        <button
-          onclick="window.location.href = '../blog_prensa/blog_prensa.html'"
-        >
+        <button onclick="window.location.href = '../blog_prensa/blog.html'">
           Ver más artículos
         </button>
       </section>
@@ -224,26 +228,14 @@
         <article>
           <h2>¿Sigues con dudas?</h2>
           <p>
-            Si aun tienes dudas, mira este video corto antes de tomar una
-            decision.
-          </p>
-          <input
-            type="button"
-            value="Ver video"
-            onclick="window.location.href = '../help/ayuda.html'"
-          />
-        </article>
-        <article>
-          <h2>Contactanos</h2>
-          <p>
             Contacta con nosotros y agendemos una llamada para una entrevista,
             donde podremos resolver tus dudas y ayudarte a elegir el curso que
             mejor se adapte a tus necesidades. Para agendar una llamada, haz
             click en el siguiente boton
             <input
               type="button"
-              onclick="window.location.href = '../contacto/contacto.html'"
-              value="Contacto"
+              onclick="window.location.href = '../help/Agendar.html'"
+              value="Ayuda"
             />
           </p>
         </article>
@@ -260,35 +252,28 @@
         /></a>
 
         <a href="../blog_prensa/blog.html">Blog</a>
-        <a href="../blog_prensa/prensa.html">Prensa</a>
-        <a href="../help/ayuda.html">Pedir ayuda</a>
+        <a href="../help/Agendar.html">Pedir ayuda</a>
         <a href="../help/fqs.html">Preguntas frecuentes</a>
 
-        <input
-          type="image"
-          src="../assets/Footer/ig.png"
-          alt="Instagram"
-          width="50"
-        />
-        <input
-          type="image"
-          src="../assets/Footer/fb.png"
-          alt="Facebook"
-          width="50"
-        />
-        <input
-          type="image"
-          src="../assets/Footer/Yt.png"
-          alt="YouTube"
-          width="50"
-        />
+        <a href="https://www.instagram.com/conquerblocks?igsh=bGZyaTR0bml3aTRj"
+          ><img
+            src="../assets/Footer/ig.png"
+            alt="Instagram"
+            width="50"
+          />Conquer Blocks</a
+        >
+        <a href="https://www.youtube.com/@conquerblocks"
+          ><img src="../assets/Footer/Yt.png" alt="YouTube" width="50" />Conquer
+          Blocks</a
+        >
+
         <a href="../legal/legal.html">Legal</a>
         <a href="../legal/privacidad.html">Privacidad</a>
         <a href="../legal/terminos_uso.html">Términos de uso</a>
         <a href="../legal/cookies.html">Política de cookies</a>
-        <p>España, Madrid, calle Leon 28</p>
-        <p>Copyright 1999-2026. All Rights Reserved.</p>
       </nav>
+      <p>España, Madrid, calle Leon 28</p>
+      <p>Copyright 1999-2026. All Rights Reserved.</p>
     </footer>
   </body>
 </html>
